@@ -1,39 +1,39 @@
 {
-  "id": "cookiesc-1",
-  "name": "Brittle Armor",
-  "description": "Gain a stack of Brittle Armor, gaining back 1 health every 2 seconds for 4 seconds. Brittle Armor cannot be cleansed.",
-  "untargeted": true,
-  "cooldown": 900,
-  "icon": "CHASM",
-  "color": "#004cb4",
-  "action": "buff",
-  "chargeTicks": 15,
-  "movementProportionWhileCharging": 1,
-  "buffs": [
-    {
-      "type": "burn",
-      "stack": "cookiesc-1",
-      "hitInterval": 120,
-      "packet": {
-        "damage": -1,
-        "lifeSteal": 0,
-        "noHit": true
-      },
-      "cleansable": false,
-      "maxTicks": 240,
-      "resetOnGameStart": true,
-      "render": {
-        "color": "#004cb4",
-        "alpha": 0.1,
-        "ticks": 10,
-        "emissionRadiusFactor": 0,
-        "particleRadius": 0.012,
-        "shine": 0.2,
-        "glow": 0.5,
-        "bloom": 0.01,
-        "bloomLow": 0.01,
-        "light": 1
-      }
-    }
-  ]
+	"id": "cookiesc-1",
+	"name": "Brittle Armor",
+	"description": "Gain a stack of Brittle Armor, gaining back 4 health over 8 seconds. Brittle Armor cannot be cleansed.",
+	"untargeted": true,
+	"cooldown": 900,
+	"icon": "CHASM",
+	"color": "#004cb4",
+	"action": "buff",
+	"chargeTicks": 15,
+	"movementProportionWhileCharging": 1,
+	"buffs": [
+		{
+			"type": "burn",
+			"stack": "cookiesc-1",
+			"hitInterval": 30,
+			"packet": {
+				"damage": -0.25,
+				"lifeSteal": 0,
+				"noHit": true
+			},
+			"cleansable": false,
+			"maxTicks": 480,
+			"resetOnGameStart": true,
+			"render": {
+				"color": "#004cb4",
+				"alpha": 0.1,
+				"ticks": 1,
+				"emissionRadiusFactor": 0,
+				"particleRadius": 0.017,
+				"shine": 0.2,
+				"glow": 0.5,
+				"bloom": 0.01,
+				"bloomLow": 0.01,
+				"light": null
+			}
+		}
+	]
 }
