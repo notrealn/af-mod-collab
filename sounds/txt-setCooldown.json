@@ -1,0 +1,19 @@
+{
+  "id": "txt-setCooldown",
+  "cutoffEarly": false,
+  "start": [
+    {
+      "volume": 0.5,
+      "stopTime": 0.25,
+      "attack": 0.01,
+      "decay": 0.24,
+      "startFreq": 146.83,
+      "stopFreq": 146.83,
+      "lowPass": 400,
+      "wave": "square",
+      "tremoloFreq": 15,
+      "tremoloStrength": 0.4,
+      "ratios": [1]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "jt-blade-hit",
+  "cutoffEarly": false,
+  "start": [
+    {
+      "volume": 0.45,
+      "stopTime": 0.5,
+      "attack": 0.1,
+      "decay": 0.4,
+      "startFreq": 400,
+      "stopFreq": 400,
+      "lowPass": 100,
+      "highPass": 40,
+      "modStartFreq": 200,
+      "modStopFreq": 200,
+      "modStartStrength": 100,
+      "modStopStrength": 100,
+      "wave": "sine",
+      "ratios": [1]
+    }
+  ]
+}

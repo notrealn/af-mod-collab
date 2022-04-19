@@ -1,0 +1,180 @@
+{
+  "id": "cookiesc-2",
+  "name": "Icicle",
+  "description": "Does damage in an area in front of you, spiking outwards for half damage. Gain a stack of Brittle Armor.",
+  "action": "projectile",
+  "color": "#004cb4",
+  "icon": "CHASM",
+  "sound": "triplet",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 120,
+  "throttle": true,
+  "projectile": {
+    "density": 7,
+    "radius": 0.03,
+    "speed": 0.7,
+    "maxTicks": 5,
+    "damage": 8,
+    "lifeSteal": 0.5,
+    "sensor": true,
+    "categories": 2,
+    "sound": "triplet",
+    "soundHit": "standard",
+    "selfPassthrough": true,
+    "source": "CHASMpassive",
+    "buffs": [
+      {
+        "type": "burn",
+        "against": 12,
+        "owner": true,
+        "stack": "cookiesc-1",
+        "hitInterval": 120,
+        "packet": {
+          "damage": -1,
+          "lifeSteal": 0,
+          "noHit": true
+        },
+        "cleansable": false,
+        "maxTicks": 240,
+        "resetOnGameStart": true,
+        "render": {
+          "color": "#004cb4",
+          "alpha": 0.1,
+          "ticks": 10,
+          "emissionRadiusFactor": 0,
+          "particleRadius": 0.012,
+          "shine": 0.2,
+          "glow": 0.5,
+          "bloom": 0.01,
+          "bloomLow": 0.01,
+          "light": 1
+        }
+      }
+    ],
+    "behaviours": [
+      {
+        "type": "spawn",
+        "trigger": {
+          "afterTicks": 5
+        },
+        "requireParent": true,
+        "projectile": {
+          "density": 7,
+          "radius": 0.01,
+          "speed": 0.6,
+          "maxTicks": 60,
+          "damage": 4,
+          "lifeSteal": 0.3,
+          "sensor": true,
+          "categories": 2,
+          "sound": "triplet",
+          "soundHit": "standard",
+          "selfPassthrough": true,
+          "source": "CHASMpassive",
+          "buffs": [
+            {
+              "type": "burn",
+              "against": 12,
+              "owner": true,
+              "stack": "cookiesc-1",
+              "hitInterval": 120,
+              "packet": {
+                "damage": -1,
+                "lifeSteal": 0,
+                "noHit": true
+              },
+              "cleansable": false,
+              "maxTicks": 240,
+              "resetOnGameStart": true,
+              "render": {
+                "color": "#004cb4",
+                "alpha": 0.1,
+                "ticks": 10,
+                "emissionRadiusFactor": 0,
+                "particleRadius": 0.012,
+                "shine": 0.2,
+                "glow": 0.5,
+                "bloom": 0.01,
+                "bloomLow": 0.01,
+                "light": 1
+              }
+            },
+            {
+              "type": "cooldown",
+              "spellId": "CHASMpassive",
+              "cleansable": false,
+              "maxTicks": 1,
+              "against": 12,
+              "owner": true,
+              "adjustCooldown": -333333
+            }
+          ],
+          "color": "#004cb4",
+          "renderers": [
+            {
+              "type": "bloom",
+              "radius": 0.02
+            },
+            {
+              "type": "projectile",
+              "ticks": 60,
+              "smoke": {
+                "axisMultiplier": 0.01,
+                "isotropicSpeed": 0.07
+              },
+              "vanish": 1
+            },
+            {
+              "type": "polygon",
+              "color": "#004cb4",
+              "numPoints": 4,
+              "radiusMultiplier": 1.3,
+              "revolutionInterval": 15,
+              "ticks": 60,
+              "light": 1,
+              "shadow": 0.5
+            },
+            {
+              "type": "strike",
+              "ticks": 8,
+              "flash": true,
+              "numParticles": 2
+            }
+          ]
+        }
+      }
+    ],
+    "color": "#004cb4",
+    "renderers": [
+      {
+        "type": "bloom",
+        "radius": 0.02
+      },
+      {
+        "type": "projectile",
+        "ticks": 90,
+        "smoke": {
+          "axisMultiplier": 0.01,
+          "isotropicSpeed": 0.07
+        },
+        "vanish": 1
+      },
+      {
+        "type": "polygon",
+        "color": "#004cb4",
+        "numPoints": 4,
+        "radiusMultiplier": 1.3,
+        "revolutionInterval": 15,
+        "ticks": 60,
+        "light": 1,
+        "shadow": 0.5
+      },
+      {
+        "type": "strike",
+        "ticks": 8,
+        "flash": true,
+        "numParticles": 2
+      }
+    ]
+  }
+}

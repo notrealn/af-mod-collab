@@ -1,0 +1,70 @@
+{
+  "id": "jtrnb-1",
+  "name": "Blast Dash",
+  "description": "Dash toward your cursor leaving behind a trail of explosions.",
+  "untargeted": true,
+  "cooldown": 600,
+  "throttle": false,
+  "icon": "jtrnb",
+  "color": "#33F4AA",
+  "action": "thrust",
+  "sound": "blaze",
+  "range": 0.3,
+  "speed": 2,
+  "damageTemplate": {
+    "damage": 0
+  },
+  "buffs": [
+    {
+      "type": "mass",
+      "cleansable": false,
+      "channelling": true,
+      "maxTicks": 60,
+      "radius": 0.005,
+      "render": {
+        "color": "#33F4AA",
+        "selfColor": true,
+        "numParticles": 0,
+        "particleRadius": 0,
+        "ticks": 1,
+        "bloom": 0.03,
+        "glow": 0.5,
+        "decay": true
+      }
+    }
+  ],
+  "projectileInterval": 1,
+  "projectile": {
+    "density": 1,
+    "sound": "flare",
+    "ccd": false,
+    "radius": 0.012,
+    "linkable": false,
+    "speed": 0,
+    "maxTicks": 1,
+    "minTicks": 1,
+    "collideWith": 0,
+    "sense": 1,
+    "hitInterval": 15,
+    "noHit": true,
+    "expireOn": 0,
+    "damage": 0,
+    "conveyable": true,
+    "destructible": false,
+    "attractable": false,
+    "color": "#33F4AA",
+    "detonate": {
+      "damage": 0,
+      "radius": 0.025,
+      "minImpulse": 0.00004,
+      "maxImpulse": 0.0001,
+      "renderTicks": 30
+    },
+    "renderers": [
+      {
+        "type": "projectile",
+        "ticks": 5
+      }
+    ]
+  }
+}

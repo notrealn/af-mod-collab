@@ -1,0 +1,31 @@
+{
+  "id": "fish-4",
+  "cutoffEarly": false,
+  "start": [
+    {
+      "volume": 0.05,
+      "stopTime": 0.5,
+      "attack": 0.1,
+      "decay": 0.25,
+      "startFreq": 480,
+      "stopFreq": 720,
+      "modStartFreq": 30,
+      "modStopFreq": 30,
+      "modStartStrength": 360,
+      "modStopStrength": 1080,
+      "tremoloFreq": 3,
+      "tremoloStrength": 0.1,
+      "wave": "triangle",
+      "ratios": [1, 1.33, 1.5]
+    },
+    {
+      "volume": 0.25,
+      "stopTime": 5,
+      "attack": 0.25,
+      "decay": 4.5,
+      "highPass": 180,
+      "lowPass": 180,
+      "wave": "brown-noise"
+    }
+  ]
+}

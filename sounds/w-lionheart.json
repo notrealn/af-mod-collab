@@ -1,0 +1,62 @@
+{
+  "id": "w-lionheart",
+  "cutoffEarly": false,
+  "start": [
+    {
+      "volume": 0,
+      "startTime": 0,
+      "stopTime": 1,
+      "attack": 0.01,
+      "decay": 1,
+      "startFreq": 51.91,
+      "stopFreq": 51.91,
+      "lowPass": 4000,
+      "wave": "triangle",
+      "tremoloFreq": 15,
+      "tremoloStrength": 0.1,
+      "ratios": [1]
+    },
+    {
+      "volume": 0,
+      "startTime": 0,
+      "stopTime": 1,
+      "attack": 0.01,
+      "decay": 1,
+      "startFreq": 130.81,
+      "stopFreq": 130.81,
+      "lowPass": 4000,
+      "wave": "triangle",
+      "tremoloFreq": 15,
+      "tremoloStrength": 0.1,
+      "ratios": [1]
+    },
+    {
+      "volume": 0,
+      "startTime": 0,
+      "stopTime": 1,
+      "attack": 0.01,
+      "decay": 1,
+      "startFreq": 155.56,
+      "stopFreq": 155.56,
+      "lowPass": 4000,
+      "wave": "triangle",
+      "tremoloFreq": 15,
+      "tremoloStrength": 0.1,
+      "ratios": [1]
+    },
+    {
+      "volume": 0,
+      "startTime": 0,
+      "stopTime": 1,
+      "attack": 0.01,
+      "decay": 1,
+      "startFreq": 207.65,
+      "stopFreq": 207.65,
+      "lowPass": 4000,
+      "wave": "triangle",
+      "tremoloFreq": 15,
+      "tremoloStrength": 0.1,
+      "ratios": [1]
+    }
+  ]
+}

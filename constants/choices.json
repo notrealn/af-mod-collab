@@ -1,0 +1,67 @@
+{
+  "Keys": [
+    {
+      "btn": "a",
+      "barSize": 0.75,
+      "wheelSize": 0.5
+    },
+    null,
+    {
+      "btn": "q",
+      "barSize": 1,
+      "wheelSize": 1
+    },
+    {
+      "btn": "w",
+      "barSize": 1,
+      "wheelSize": 0.75
+    },
+    {
+      "btn": "e",
+      "barSize": 1,
+      "wheelSize": 0.75
+    },
+    {
+      "btn": "r",
+      "barSize": 1,
+      "wheelSize": 0.75
+    },
+    null,
+    {
+      "btn": "f",
+      "barSize": 0.75,
+      "wheelSize": 0.5
+    }
+  ],
+  "Options": {
+    "a": [
+      ["fish-1", "jtrnb-1", "mesoa"],
+      ["cookiesc-1", "txt-1"]
+    ],
+    "q": [
+      ["fish-2", "jtrnb-2", "mesoq"],
+      ["cookiesc-2", "txt-2"]
+    ],
+    "w": [
+      ["fish-3", "jtrnb-3", "mesow"],
+      ["cookiesc-3", "txt-4"]
+    ],
+    "e": [
+      ["fish-4", "jtrnb-4", "mesoe"],
+      ["cookiesc-4", "txt-3"]
+    ],
+    "r": [
+      ["fish-5", "jtrnb-5", "mesor"],
+      ["cookiesc-5", "txt-5"]
+    ],
+    "f": [
+      ["fishHatter", "jtrnb", "meso"],
+      ["cookiesc", "txt"]
+    ]
+  },
+  "Special": {
+    "move": "move",
+    "retarget": "retarget",
+    "s": "stop"
+  }
+}

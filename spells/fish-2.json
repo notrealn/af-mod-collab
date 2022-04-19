@@ -1,0 +1,131 @@
+{
+  "id": "fish-2",
+  "name": "Fish Bolt",
+  "description": "Hold down the button to hold the Fish Bolt in place near your player and it will grow and increase damage when held, release the button to lauch it in any direction. This projectile will follow your movement which can be used to aim.",
+  "action": "focus",
+  "color": "#a9e48a",
+  "icon": "fishCorpse",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 150,
+  "focusDelaysCooldown": false,
+  "throttle": true,
+  "movementProportionWhileChannelling": 1,
+  "release": {},
+  "releaseAfterTicks": 0,
+  "releaseBehaviours": [
+    {
+      "type": "homing",
+      "targetType": "cursor",
+      "newSpeed": 0.55,
+      "revolutionsPerSecond": 1,
+      "redirect": true
+    }
+  ],
+  "projectile": {
+    "damage": 20,
+    "lifeSteal": 0.3,
+    "density": 6,
+    "selfPassthrough": true,
+    "radius": 0.004,
+    "speed": 1,
+    "maxTicks": 600,
+    "categories": 2,
+    "shieldTakesOwnership": false,
+    "color": "#a9e48a",
+    "partialDamage": {
+      "initialMultiplier": 0.05,
+      "finalMultiplier": 0.5,
+      "ticks": 1
+    },
+    "behaviours": [
+      {
+        "type": "homing",
+        "targetType": "cursor",
+        "trigger": {
+          "afterTicks": 1
+        },
+        "redirect": true,
+        "newSpeed": 0
+      },
+      {
+        "type": "strafe"
+      },
+      {
+        "type": "partial",
+        "partialDamage": {
+          "initialMultiplier": 0.05,
+          "finalMultiplier": 1,
+          "ticks": 90
+        }
+      },
+      {
+        "type": "expireOnOwnerDeath"
+      }
+    ],
+    "buffs": [
+      {
+        "type": "cooldown",
+        "against": 12,
+        "owner": true,
+        "maxTicks": 420,
+        "cleansable": false,
+        "stack": "fishCd",
+        "spellId": "fish-2",
+        "maxStacks": 100,
+        "cooldownRateModifier": 1,
+        "render": {
+          "type": "swirl",
+          "color": "#a9e48a",
+          "alpha": 0.2,
+          "ticks": 30,
+          "shine": 0.3,
+          "glow": 0.25,
+          "radius": 0.06,
+          "loopTicks": 20,
+          "numParticles": 1,
+          "fade": "#ff52d3",
+          "particleRadius": 0.004666666666666666,
+          "smoke": {
+            "axisMultiplier": 1,
+            "isotropicSpeed": 0
+          }
+        }
+      }
+    ],
+    "sound": "fish-2",
+    "renderers": [
+      {
+        "type": "bloom",
+        "light": 1,
+        "color": "#a9e48a"
+      },
+      {
+        "type": "polygon",
+        "color": "#a9e48a",
+        "numPoints": 3,
+        "radiusMultiplier": 2,
+        "revolutionInterval": 23,
+        "shadow": 1,
+        "ticks": 15,
+        "light": null
+      },
+      {
+        "type": "ray",
+        "radiusMultiplier": 0.5,
+        "ticks": 15,
+        "glow": 0.6,
+        "light": null,
+        "vanish": 0.25,
+        "shadow": 1,
+        "fade": "#ff52d3"
+      },
+      {
+        "type": "strike",
+        "ticks": 15,
+        "shadow": 1,
+        "flash": true,
+        "numParticles": 9
+      }
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "fish-1",
+  "name": "Ripple",
+  "description": "Jump forward a total of 8 times swaping with object and players you collide with",
+  "action": "spray",
+  "sound": "triplet",
+  "color": "#a9e48a",
+  "icon": "fishCorpse",
+  "maxAngleDiffInRevs": 0,
+  "cooldown": 420,
+  "throttle": true,
+  "movementProportionWhileChannelling": 0.1,
+  "numProjectilesPerTick": 1,
+  "intervalTicks": 8,
+  "lengthTicks": 64,
+  "jitterRatio": 0,
+  "chargeTicks": 20,
+  "interruptibleAfterTicks": 0,
+  "interruptCancel": {
+    "cooldownTicks": 300,
+    "maxChannelingTicks": 0
+  },
+  "projectile": {
+    "density": 0.001,
+    "radius": 0.01,
+    "speed": 0,
+    "color": "#a9e48a",
+    "maxTicks": 4,
+    "damage": 0,
+    "categories": 2,
+    "collideWith": 0,
+    "expireOn": 0,
+    "expireOnMirror": true,
+    "swappable": false,
+    "shieldTakesOwnership": false,
+    "sensor": false,
+    "detonate": {
+      "damage": 1,
+      "lifeSteal": 0.3,
+      "radius": 0.04,
+      "minImpulse": 0,
+      "maxImpulse": 0,
+      "swapWith": 1,
+      "renderTicks": 0
+    },
+    "behaviours": [
+      {
+        "type": "expireOnOwnerDeath"
+      },
+      {
+        "type": "homing",
+        "targetType": "follow",
+        "trigger": {
+          "afterTicks": 1
+        },
+        "redirect": true,
+        "newSpeed": 1.5
+      }
+    ],
+    "buffs": [],
+    "sound": "fish-1",
+    "renderers": [
+      {
+        "type": "bloom"
+      },
+      {
+        "type": "swirl",
+        "color": "#a9e48a",
+        "ticks": 50,
+        "radius": 0.01,
+        "particleRadius": 0.003,
+        "smoke": 0.05,
+        "numParticles": 2,
+        "vanish": 1,
+        "shadow": 1,
+        "loopTicks": 15,
+        "glow": 0.05,
+        "fade": "#ff52d3"
+      },
+      {
+        "type": "projectile",
+        "shadow": 1,
+        "ticks": 1,
+        "radiusMultiplier": 0.5,
+        "light": 1,
+        "fade": "#ff52d3"
+      },
+      {
+        "type": "ray",
+        "color": "#a9e48a",
+        "shadow": 1,
+        "ticks": 40,
+        "light": null,
+        "fade": "#ff52d3",
+        "vanish": 0
+      }
+    ]
+  }
+}

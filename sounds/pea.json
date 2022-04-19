@@ -1,0 +1,15 @@
+{
+  "id": "pea",
+  "start": [
+    {
+      "stopTime": 0.3,
+      "attack": 0.01,
+      "decay": 0.29,
+      "startFreq": 250,
+      "volume": 0.03,
+      "stopFreq": 240,
+      "wave": "sawtooth",
+      "ratios": [1, 2.15]
+    }
+  ]
+}

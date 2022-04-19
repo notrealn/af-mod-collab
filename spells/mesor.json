@@ -1,0 +1,70 @@
+{
+  "id": "mesor",
+  "description": "For five seconds, cause Injection's reload time to dramatically drop and transform it into an orbital slash. During the duration, deal 70% less damage.",
+  "action": "projectile",
+  "color": "#800",
+  "name": "Modified Triage",
+  "icon": "meso",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 900,
+  "throttle": true,
+  "projectile": {
+    "density": 0.001,
+    "attractable": false,
+    "radius": 0.02,
+    "speed": 1,
+    "maxTicks": 300,
+    "damage": 0,
+    "collideWith": 0,
+    "sound": "fire",
+    "sense": 2,
+    "expireOn": 0,
+    "lifeSteal": 0.3,
+    "categories": 16384,
+    "projectileBuffs": [],
+    "behaviours": [
+      {
+        "type": "strafe"
+      },
+      {
+        "type": "homing",
+        "targetType": "self",
+        "trigger": {
+          "afterTicks": 10
+        }
+      },
+      {
+        "type": "aura",
+        "radius": 1,
+        "against": 1,
+        "tickInterval": 1,
+        "buffs": [
+          {
+            "type": "cooldown",
+            "maxTicks": 1,
+            "cleansable": false,
+            "spellId": "mesoq",
+            "maxCooldown": 60
+          },
+          {
+            "type": "lifeSteal",
+            "cleansable": false,
+            "damageMultiplier": 0.3,
+            "maxTicks": 1,
+            "render": {
+              "color": "#800",
+              "particleRadius": 0.0125,
+              "emissionRadiusFactor": 0,
+              "ticks": 10,
+              "light": 1,
+              "invisible": true
+            },
+            "against": 3
+          }
+        ]
+      }
+    ],
+    "color": "#aaa1",
+    "renderers": []
+  }
+}

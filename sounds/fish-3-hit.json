@@ -1,0 +1,21 @@
+{
+  "id": "fish-3-hit",
+  "cutoffEarly": false,
+  "start": [
+    {
+      "stopTime": 0.75,
+      "attack": 1e-8,
+      "decay": 0.74,
+      "startFreq": 100,
+      "stopFreq": 6,
+      "modStartFreq": 850,
+      "modStopFreq": 700,
+      "modStartStrength": 100,
+      "modStopStrength": 200,
+      "tremoloFreq": 5,
+      "tremoloStrength": 0.21,
+      "wave": "triangle",
+      "ratios": [1, 1.2, 1.5, 2]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "AngularDamping": 5,
+  "LinearDamping": 2,
+  "Density": 100,
+  "ReturnProportion": 0.04,
+  "ReturnMinSpeed": 0.02,
+  "ReturnTurnRate": 0.002
+}

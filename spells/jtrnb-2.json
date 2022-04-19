@@ -1,0 +1,81 @@
+{
+  "id": "jtrnb-2",
+  "name": "Tri-Blade Barrage",
+  "description": "Launch 3 spectral blades toward your enemies.",
+  "action": "spray",
+  "icon": "jtrnb",
+  "color": "#33F4AA",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 180,
+  "throttle": true,
+  "movementProportionWhileChannelling": 1,
+  "numProjectilesPerTick": 1,
+  "intervalTicks": 10,
+  "lengthTicks": 30,
+  "jitterRatio": 1.5,
+  "projectile": {
+    "density": 7,
+    "radius": 0.0045,
+    "speed": -0.55,
+    "maxTicks": 180,
+    "damage": 4,
+    "lifeSteal": 0.3,
+    "selfPassthrough": true,
+    "categories": 2,
+    "expireAgainstObjects": 65534,
+    "sound": "jt-blade",
+    "behaviours": [
+      {
+        "type": "homing",
+        "targetType": "follow",
+        "trigger": {
+          "afterTicks": 35
+        },
+        "redirect": true,
+        "newSpeed": 0.6
+      },
+      {
+        "type": "homing",
+        "targetType": "follow",
+        "trigger": {
+          "afterTicks": 2
+        },
+        "redirect": true,
+        "newSpeed": 0
+      },
+      {
+        "type": "strafe"
+      }
+    ],
+    "color": "#33F4AA",
+    "renderers": [
+      {
+        "type": "bloom",
+        "color": "#33F4AA",
+        "radius": 0.012
+      },
+      {
+        "type": "ray",
+        "ticks": 5,
+        "shine": 1,
+        "glow": 0.2,
+        "bloom": 0.005,
+        "light": 0.8
+      },
+      {
+        "type": "polygon",
+        "color": "#90ABA0",
+        "numPoints": 3,
+        "radiusMultiplier": 1.5,
+        "revolutionInterval": 31,
+        "ticks": 15,
+        "light": 1,
+        "shadow": 0.5,
+        "smoke": {
+          "axisMultiplier": 0.1,
+          "isotropicSpeed": 0.02
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "fire",
+  "sustain": [
+    {
+      "stopTime": 1.5,
+      "attack": 0.25,
+      "decay": 0.25,
+      "volume": 0.05,
+      "highPass": 232,
+      "lowPass": 238,
+      "wave": "brown-noise"
+    }
+  ]
+}

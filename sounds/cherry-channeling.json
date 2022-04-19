@@ -1,0 +1,27 @@
+{
+  "id": "cherry-channelling",
+  "start": [
+    {
+      "stopTime": 6,
+      "attack": 0.25,
+      "decay": 1.75,
+      "highPass": 800,
+      "volume": 0.4,
+      "lowPass": 810,
+      "wave": "brown-noise"
+    },
+    {
+      "stopTime": 6,
+      "attack": 0.25,
+      "decay": 1.75,
+      "volume": 0.4,
+      "startFreq": 1100,
+      "stopFreq": 1103,
+      "lowPass": 300,
+      "tremoloFreq": 10,
+      "tremoloStrength": 0.2,
+      "wave": "square",
+      "ratios": [1, 1.25, 1.5]
+    }
+  ]
+}

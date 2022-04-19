@@ -1,0 +1,25 @@
+{
+  "id": "fish-2",
+  "start": [
+    {
+      "volume": 0.1,
+      "stopTime": 1,
+      "attack": 0.025,
+      "decay": 0.75,
+      "startFreq": 1200,
+      "stopFreq": 1700,
+      "wave": "sine",
+      "ratios": [1, 1.5, 2],
+      "tremoloFreq": 8,
+      "tremoloStrength": 1
+    },
+    {
+      "stopTime": 6,
+      "attack": 0.25,
+      "decay": 1.75,
+      "highPass": 2000,
+      "lowPass": 500,
+      "wave": "brown-noise"
+    }
+  ]
+}

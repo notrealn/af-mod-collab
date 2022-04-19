@@ -1,0 +1,58 @@
+{
+  "id": "mesoe",
+  "name": "Critical Injury",
+  "description": "Coalesce a spear of blood and strike rapidly, slowing opponents.",
+  "action": "spray",
+  "color": "#800",
+  "sound": "cherry",
+  "icon": "meso",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 600,
+  "chargeTicks": 20,
+  "movementProportionWhileChannelling": 1,
+  "numProjectilesPerTick": 1,
+  "intervalTicks": 6,
+  "lengthTicks": 60,
+  "jitterRatio": 0,
+  "projectile": {
+    "density": 0.001,
+    "radius": 0.003,
+    "sense": 1,
+    "collideWith": 8,
+    "expireOn": 8,
+    "minTicks": 3,
+    "speed": 1,
+    "maxTicks": 10,
+    "damage": 2,
+    "lifeSteal": 0.3,
+    "behaviours": [],
+    "buffs": [
+      {
+        "type": "movement",
+        "against": 12,
+        "collideWith": 1,
+        "maxTicks": 60,
+        "render": {
+          "color": "#800",
+          "alpha": 0.3,
+          "ticks": 15,
+          "emissionRadiusFactor": 0.3,
+          "particleRadius": 0.01,
+          "light": 1
+        },
+        "movementProportion": 0.16
+      }
+    ],
+    "color": "#800",
+    "renderers": [
+      {
+        "type": "projectile",
+        "intermediateInterpolations": 2,
+        "ticks": 30,
+        "vanish": 1,
+        "shine": -1,
+        "shadow": 0.25
+      }
+    ]
+  }
+}

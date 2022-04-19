@@ -1,0 +1,18 @@
+{
+  "id": "bulb-setCooldown",
+  "cutoffEarly": false,
+  "start": [
+    {
+      "volume": 0.21,
+      "stopTime": 0.4,
+      "attack": 0.001,
+      "decay": 0.19,
+      "startFreq": 280,
+      "stopFreq": 180,
+      "lowPass": 120,
+      "highPass": 60,
+      "wave": "sine",
+      "ratios": [1, 1.2]
+    }
+  ]
+}

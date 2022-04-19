@@ -1,0 +1,22 @@
+{
+  "id": "fish-3",
+  "start": [
+    {
+      "volume": 0.45,
+      "stopTime": 1,
+      "attack": 0.1,
+      "decay": 0.9,
+      "lowPass": 450,
+      "startFreq": 1000,
+      "stopFreq": 900,
+      "tremoloFreq": 20,
+      "tremoloStrength": 0.39,
+      "modStartFreq": 900,
+      "modStopFreq": 900,
+      "modStartStrength": 100,
+      "modStopStrength": 1000,
+      "wave": "triangle",
+      "ratios": [1]
+    }
+  ]
+}

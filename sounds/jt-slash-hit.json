@@ -1,0 +1,23 @@
+{
+  "id": "jt-slash",
+  "start": [
+    {
+      "volume": 2.5,
+      "stopTime": 5,
+      "attack": 0.15,
+      "decay": 0.5,
+      "startFreq": 150.3,
+      "stopFreq": 150.3,
+      "modStartFreq": 5,
+      "modStopFreq": 4,
+      "modStartStrength": 1,
+      "modStopStrength": 1,
+      "lowPass": 100,
+      "highPass": 400,
+      "tremoloFreq": 7,
+      "tremoloStrength": 0.2,
+      "wave": "square",
+      "ratios": [1, 2, 4, 8, 16]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "jt-drive",
+  "start": [
+    {
+      "stopTime": 1,
+      "attack": 0.1,
+      "decay": 0.9,
+      "lowPass": 450,
+      "startFreq": 200,
+      "stopFreq": 210,
+      "tremoloFreq": 7,
+      "tremoloStrength": 0.3,
+      "modStartFreq": 1000,
+      "modStopFreq": 10,
+      "modStartStrength": 100,
+      "modStopStrength": 1000,
+      "wave": "triangle",
+      "ratios": [1]
+    }
+  ]
+}

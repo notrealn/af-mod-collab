@@ -1,0 +1,93 @@
+{
+  "id": "fish-4",
+  "name": "Tsunami",
+  "description": "Create 4 projectiles that will surround your player, after a second they will launch out towards your cursor.",
+  "action": "spray",
+  "color": "#a9e48a",
+  "icon": "fishCorpse",
+  "sound": "triplet",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 270,
+  "throttle": true,
+  "movementProportionWhileChannelling": 1,
+  "numProjectilesPerTick": 1,
+  "intervalTicks": 5,
+  "lengthTicks": 20,
+  "jitterRatio": 2,
+  "buffs": [],
+  "projectile": {
+    "density": 7,
+    "radius": 0.003,
+    "speed": 0.65,
+    "maxTicks": 180,
+    "damage": 4.5,
+    "lifeSteal": 0.3,
+    "selfPassthrough": true,
+    "categories": 2,
+    "expireAgainstObjects": 65534,
+    "sound": "fish-4",
+    "soundHit": "standard",
+    "behaviours": [
+      {
+        "type": "homing",
+        "targetType": "self",
+        "trigger": {
+          "afterTicks": 1
+        },
+        "redirect": true,
+        "newSpeed": 0
+      },
+      {
+        "type": "strafe"
+      },
+      {
+        "type": "expireOnOwnerDeath"
+      },
+      {
+        "type": "homing",
+        "targetType": "follow",
+        "trigger": {
+          "afterTicks": 60
+        },
+        "redirect": true,
+        "newSpeed": 0.65
+      }
+    ],
+    "color": "#a9e48a",
+    "renderers": [
+      {
+        "type": "bloom",
+        "light": 0.2,
+        "color": "#a9e48a"
+      },
+      {
+        "type": "polygon",
+        "color": "#a9e48a",
+        "shadow": 1,
+        "numPoints": 3,
+        "radiusMultiplier": 2,
+        "revolutionInterval": 23,
+        "ticks": 15,
+        "light": null
+      },
+      {
+        "type": "ray",
+        "radiusMultiplier": 0.5,
+        "ticks": 15,
+        "glow": 0.6,
+        "shadow": 1,
+        "light": null,
+        "vanish": 0.25,
+        "fade": "#ff52d3"
+      },
+      {
+        "type": "strike",
+        "ticks": 15,
+        "shadow": 1,
+        "flash": true,
+        "numParticles": 9
+      }
+    ],
+    "buffs": []
+  }
+}

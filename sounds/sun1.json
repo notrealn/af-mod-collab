@@ -1,0 +1,17 @@
+{
+  "id": "sun1",
+  "start": [
+    {
+      "stopTime": 0.8,
+      "volume": 0.2,
+      "attack": 0.23,
+      "decay": 0.49,
+      "lowPass": 200,
+      "highPass": 20,
+      "startFreq": 380,
+      "stopFreq": 380,
+      "wave": "square",
+      "ratios": [1.1, 2.2]
+    }
+  ]
+}

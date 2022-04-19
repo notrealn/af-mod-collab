@@ -1,0 +1,32 @@
+{
+  "InitialRadius": 0.5,
+  "HeroLayoutProportion": 0.625,
+  "HeroResetProportion": 0.625,
+  "LavaDamageInterval": 20,
+  "LavaDamage": {
+    "damage": 4.166666666666666,
+    "lifeSteal": 0.3,
+    "isLava": true,
+    "source": "lava"
+  },
+  "LavaBuffs": [
+    {
+      "type": "cooldown",
+      "spellIds": ["teleport", "thrust", "swap", "vanish", "voidRush"],
+      "maxTicks": 20,
+      "cooldownRateModifier": 1
+    }
+  ],
+  "SecondsToShrink": 90,
+  "ShrinkPowerMinPlayers": 1.5,
+  "ShrinkPowerMaxPlayers": 0.25,
+  "ShrinkCatchupProportionPerTick": 0.003,
+  "ProjectileSpeedDecayFactorPerTick": 0.05,
+  "SlopSpeed": 0.001,
+  "SwatchHealth": 100,
+  "BotName": "AcolyteBot",
+  "DefaultGameStartMessage": "Game started. Defeat your enemies!",
+  "SlopRadius": 0.05,
+  "SwapDistanceReduction": 0.01,
+  "MaxLifeSteal": 1
+}

@@ -1,0 +1,7 @@
+{
+  "id": "txt",
+  "icon": "txt",
+  "description": "RUN, WALK, CRAWL! FEAR ME!",
+  "passive": true,
+  "color": "#f0a"
+}

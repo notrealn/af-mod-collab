@@ -1,0 +1,23 @@
+{
+  "MasterVolume": 2,
+  "Reverbs": [
+    {
+      "Volume": 0.3,
+      "TimeSeconds": 1.8,
+      "CutoffFrequency": 100,
+      "FilterType": "lowpass"
+    },
+    {
+      "Volume": 0.2,
+      "TimeSeconds": 1.2,
+      "CutoffFrequency": 1000,
+      "FilterType": "lowpass"
+    },
+    {
+      "Volume": 0.05,
+      "TimeSeconds": 1.8,
+      "CutoffFrequency": 8000,
+      "FilterType": "highpass"
+    }
+  ]
+}

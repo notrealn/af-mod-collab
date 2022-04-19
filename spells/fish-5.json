@@ -1,0 +1,120 @@
+{
+  "id": "fish-5",
+  "name": "Rip Tide",
+  "description": "Hold the button to use the grapple. Move your cursor to swing it around and thoss your enemies.",
+  "action": "focus",
+  "color": "#a9e48a",
+  "icon": "fishCorpse",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 360,
+  "throttle": false,
+  "unlink": true,
+  "strikeCancel": {
+    "collideWith": 2,
+    "notCollideTypes": ["meteor", "meteorite"],
+    "notLinked": true,
+    "against": 65534
+  },
+  "release": {
+    "interrupt": true,
+    "interruptibleAfterTicks": 35
+  },
+  "maxChannellingTicks": 120,
+  "movementProportionWhileChannelling": 1,
+  "projectile": {
+    "density": 1,
+    "radius": 0.005,
+    "speed": 0.9,
+    "fixedSpeed": false,
+    "speedDamping": 3,
+    "maxTicks": 60,
+    "damage": 0,
+    "collideWith": 65534,
+    "sense": 1,
+    "expireOn": 13,
+    "expireOnMirror": true,
+    "link": {
+      "linkWith": 13,
+      "selfFactor": 0.25,
+      "targetFactor": 0.45,
+      "impulsePerTick": 0.00002,
+      "sidewaysImpulsePerTick": 0.00002,
+      "massInvariant": true,
+      "minDistance": 0.05,
+      "maxDistance": 0.1,
+      "linkTicks": 90,
+      "channelling": true,
+      "render": {
+        "type": "link",
+        "color": "#a9e48a",
+        "width": 0.02,
+        "alpha": 0.5,
+        "toWidth": 0.000001,
+        "glow": 0.3,
+        "bloom": 0.002,
+        "fade": "#ff52d3",
+        "shadow": 1,
+        "light": true
+      }
+    },
+    "buffs": [
+      {
+        "collideWith": 65535,
+        "owner": true,
+        "type": "glide",
+        "maxTicks": 60,
+        "linkOwner": true,
+        "linearDampingMultiplier": 10
+      },
+      {
+        "collideWith": 1,
+        "type": "glide",
+        "maxTicks": 60,
+        "linkVictim": true,
+        "linearDampingMultiplier": 0.9
+      }
+    ],
+    "behaviours": [
+      {
+        "type": "strafe"
+      },
+      {
+        "type": "expireOnOwnerDeath"
+      },
+      {
+        "type": "expireOnChannellingEnd"
+      },
+      {
+        "type": "homing",
+        "targetType": "follow",
+        "revolutionsPerSecond": 0.002,
+        "maxTicks": 35
+      },
+      {
+        "trigger": {
+          "afterTicks": 45
+        },
+        "type": "homing",
+        "targetType": "self",
+        "newSpeed": 1.2,
+        "speedDecayPerTick": 0.05
+      }
+    ],
+    "sound": "fish-5",
+    "color": "#f06",
+    "renderers": [
+      {
+        "type": "link",
+        "color": "#a9e48a",
+        "width": 0.02,
+        "alpha": 0.5,
+        "toWidth": 0.000001,
+        "glow": 0.3,
+        "bloom": 0.002,
+        "fade": "#ff52d3",
+        "shadow": 1,
+        "light": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "jt-blade",
+  "start": [
+    {
+      "volume": 0.25,
+      "stopTime": 0.25,
+      "attack": 0.05,
+      "decay": 0.2,
+      "modStartFreq": 3000,
+      "modStopFreq": 3000,
+      "lowPass": 600,
+      "highPass": 400,
+      "wave": "brown-noise"
+    },
+    {
+      "volume": 15.5,
+      "stopTime": 0.45,
+      "attack": 0.01,
+      "decay": 0.19,
+      "startFreq": 8000,
+      "stopFreq": 15000,
+      "lowPass": 500,
+      "modStartFreq": 240,
+      "modStopFreq": 260,
+      "modStartStrength": 80,
+      "modStopStrength": 1050,
+      "wave": "square",
+      "ratios": [1]
+    }
+  ]
+}

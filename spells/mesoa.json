@@ -1,0 +1,62 @@
+{
+  "id": "mesoa",
+  "name": "Blood Pressure",
+  "description": "Teleport and slash through opponents.",
+  "range": 0.1,
+  "maxAngleDiffInRevs": 1,
+  "cooldown": 600,
+  "throttle": false,
+  "debuff": true,
+  "damageTemplate": {
+    "damage": 0
+  },
+  "speed": 20,
+  "icon": "meso",
+  "color": "#800",
+  "action": "thrust",
+  "buffs": [
+    {
+      "type": "mass",
+      "cleansable": false,
+      "channelling": true,
+      "maxTicks": 10,
+      "radius": 0.00005,
+      "restrictCollideWith": 0,
+      "appendCollideWith": 0
+    }
+  ],
+  "projectileInterval": 10,
+  "projectile": {
+    "density": 0.01,
+    "radius": 0.014,
+    "speed": 2,
+    "sound": "sun3",
+    "maxTicks": 180,
+    "damage": 18,
+    "collideWith": 3,
+    "lifeSteal": 0.3,
+    "sensor": true,
+    "categories": 2,
+    "expireAgainstHeroes": 1,
+    "expireOn": 1,
+    "color": "#800",
+    "renderers": [
+      {
+        "type": "ray",
+        "ticks": 10,
+        "smoke": 0.05,
+        "vanish": 1,
+        "shine": -1,
+        "shadow": 0.25
+      }
+    ],
+    "behaviours": [
+      {
+        "type": "homing",
+        "maxTurnProportion": 1,
+        "targetType": "self"
+      }
+    ],
+    "buffs": []
+  }
+}

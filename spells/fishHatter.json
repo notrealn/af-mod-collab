@@ -1,0 +1,13 @@
+{
+  "id": "fishHatter",
+  "name": "FishHatter",
+  "description": "Utilize shovel",
+  "effects": [],
+  "passive": true,
+  "untargeted": true,
+  "cooldown": 1,
+  "buffs": [],
+  "icon": "fishCorpse",
+  "color": "#a9e48a",
+  "action": "buff"
+}

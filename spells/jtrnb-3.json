@@ -1,0 +1,217 @@
+{
+  "id": "jtrnb-3",
+  "name": "Blade Burst",
+  "description": "Release a flurry of slashes around you.",
+  "action": "spray",
+  "sound": "kamehameha",
+  "icon": "jtrnb",
+  "color": "#33F4AA",
+  "chargeTicks": 25,
+  "buffs": [
+    {
+      "type": "movement",
+      "stack": "stop",
+      "maxTicks": 60,
+      "movementProportion": 0
+    }
+  ],
+  "maxAngleDiffInRevs": 0.0001,
+  "cooldown": 480,
+  "throttle": true,
+  "revsPerTickWhileChannelling": 0,
+  "movementCancel": true,
+  "jitterRatio": 1.5,
+  "intervalTicks": 2,
+  "lengthTicks": 24,
+  "projectile": {
+    "density": 0.0001,
+    "attractable": false,
+    "radius": 0.005,
+    "speed": 0.0001,
+    "maxTicks": 45,
+    "damage": 6,
+    "lifeSteal": 0.3,
+    "collideWith": 0,
+    "expireOn": 0,
+    "swappable": false,
+    "sound": "kamehameha",
+    "color": "#44ddff",
+    "renderers": [
+      {
+        "type": "reticule",
+        "color": "rgba(255, 255, 255, 0.025)",
+        "radius": 0.12,
+        "minRadius": 0.11
+      },
+      {
+        "type": "bloom",
+        "radius": 0.07,
+        "light": 0.02
+      },
+      {
+        "type": "swirl",
+        "color": "#90ABA0",
+        "alpha": 0.5,
+        "radius": 0.12,
+        "ticks": 15,
+        "loopTicks": 45,
+        "numParticles": 5,
+        "particleRadius": 0.007666666666666667,
+        "glow": 0.2,
+        "shine": 0.12,
+        "vanish": 0.34,
+        "bloom": 0.02,
+        "light": 0.05,
+        "smoke": {
+          "axisMultiplier": 0.12,
+          "isotropicSpeed": 0.02
+        }
+      }
+    ],
+    "behaviours": [
+      {
+        "type": "homing",
+        "targetType": "cursor",
+        "trigger": {
+          "atCursor": true
+        },
+        "newSpeed": 0,
+        "redirect": true
+      },
+      {
+        "type": "spawn",
+        "trigger": {
+          "afterTicks": 1
+        },
+        "projectile": {
+          "density": 0.0001,
+          "expireOn": 0,
+          "sensor": true,
+          "radius": 0.003,
+          "speed": 0.1,
+          "maxTicks": 48,
+          "damage": 2,
+          "lifeSteal": 0.3,
+          "categories": 2,
+          "sound": "jt-blade",
+          "color": "#33F4AA",
+          "renderers": [
+            {
+              "type": "bloom",
+              "color": "#33F4AA",
+              "radius": 0.012
+            },
+            {
+              "type": "ray",
+              "ticks": 5,
+              "shine": 1,
+              "glow": 0.2,
+              "bloom": 0.005,
+              "light": 0.8
+            },
+            {
+              "type": "polygon",
+              "color": "#90ABA0",
+              "numPoints": 3,
+              "radiusMultiplier": 1.5,
+              "revolutionInterval": 31,
+              "ticks": 15,
+              "light": 1,
+              "shadow": 0.5,
+              "smoke": {
+                "axisMultiplier": 0.1,
+                "isotropicSpeed": 0.02
+              }
+            }
+          ],
+          "behaviours": [
+            {
+              "type": "homing",
+              "targetType": "follow",
+              "revolutionsPerSecond": 1,
+              "maxTurnProportion": 0.034
+            },
+            {
+              "type": "homing",
+              "targetType": "self",
+              "trigger": {
+                "afterTicks": 10
+              },
+              "newSpeed": -1.2,
+              "redirect": true
+            },
+            {
+              "trigger": {
+                "afterTicks": 10
+              },
+              "type": "clearHits"
+            },
+            {
+              "type": "homing",
+              "targetType": "self",
+              "trigger": {
+                "afterTicks": 18
+              },
+              "newSpeed": 1.2,
+              "redirect": true
+            },
+            {
+              "trigger": {
+                "afterTicks": 18
+              },
+              "type": "clearHits"
+            },
+            {
+              "type": "homing",
+              "targetType": "self",
+              "trigger": {
+                "afterTicks": 26
+              },
+              "newSpeed": -1.2,
+              "redirect": true
+            },
+            {
+              "trigger": {
+                "afterTicks": 26
+              },
+              "type": "clearHits"
+            },
+            {
+              "type": "homing",
+              "targetType": "self",
+              "trigger": {
+                "afterTicks": 34
+              },
+              "newSpeed": 1.2,
+              "redirect": true
+            },
+            {
+              "trigger": {
+                "afterTicks": 34
+              },
+              "type": "clearHits"
+            },
+            {
+              "type": "homing",
+              "targetType": "self",
+              "trigger": {
+                "afterTicks": 42
+              },
+              "newSpeed": -1.2,
+              "redirect": true
+            },
+            {
+              "trigger": {
+                "afterTicks": 42
+              },
+              "type": "clearHits"
+            }
+          ]
+        },
+        "numProjectiles": 1,
+        "spread": 1.5,
+        "expire": false
+      }
+    ]
+  }
+}

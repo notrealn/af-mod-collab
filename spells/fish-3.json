@@ -1,0 +1,112 @@
+{
+  "id": "fish-3",
+  "name": "Slam",
+  "description": "Charge forward a short distance and stun any enemy hit by the melee strike.",
+  "action": "projectile",
+  "color": "#a9e48a",
+  "icon": "fishCorpse",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 210,
+  "chargeTicks": 15,
+  "revsPerTickWhileCharging": 0,
+  "throttle": true,
+  "recoil": -0.5,
+  "buffs": [
+    {
+      "type": "movement",
+      "stack": "fish-3-start",
+      "maxTicks": 30,
+      "movementProportion": 0.2,
+      "render": {
+        "color": "#a9e48a",
+        "fade": "#ff52d3",
+        "alpha": 1,
+        "ticks": 30,
+        "emissionRadiusFactor": 0,
+        "particleRadius": 0.014,
+        "shine": 0,
+        "glow": 0,
+        "bloom": 0,
+        "vanish": 1,
+        "decay": true
+      }
+    }
+  ],
+  "projectile": {
+    "density": 50,
+    "radius": 0.0035,
+    "speed": 0.9,
+    "maxTicks": 45,
+    "damage": 15,
+    "lifeSteal": 0.3,
+    "categories": 2,
+    "sound": "fish-3",
+    "color": "#a9e48a",
+    "behaviours": [
+      {
+        "type": "homing",
+        "targetType": "follow",
+        "trigger": {
+          "afterTicks": 1
+        },
+        "redirect": true,
+        "newSpeed": 0
+      },
+      {
+        "type": "strafe"
+      }
+    ],
+    "buffs": [
+      {
+        "type": "movement",
+        "stack": "fish-3",
+        "maxTicks": 90,
+        "movementProportion": 0.25,
+        "against": 12,
+        "render": {
+          "color": "#ffe599",
+          "alpha": 0.5,
+          "ticks": 15,
+          "emissionRadiusFactor": 1,
+          "particleRadius": 0.007,
+          "shine": 0.2,
+          "glow": 0.3,
+          "bloom": 0,
+          "vanish": 1
+        }
+      }
+    ],
+    "renderers": [
+      {
+        "type": "bloom",
+        "radius": 0.045
+      },
+      {
+        "type": "projectile",
+        "shadow": 1,
+        "ticks": 1
+      },
+      {
+        "type": "projectile",
+        "light": 0.5,
+        "ticks": 30,
+        "shadow": 1,
+        "fade": "#ff52d3"
+      },
+      {
+        "type": "ray",
+        "shadow": 1,
+        "ticks": 30,
+        "fade": "#ff52d3"
+      },
+      {
+        "type": "strike",
+        "shadow": 1,
+        "ticks": 30,
+        "flash": true,
+        "numParticles": 5,
+        "detonate": 0.06
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "meso",
+  "icon": "meso",
+  "color": "#800",
+  "description": "Hack and slash.",
+  "passive": true
+}

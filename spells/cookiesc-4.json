@@ -1,0 +1,123 @@
+{
+  "id": "cookiesc-4",
+  "name": "Broken Tomb",
+  "description": "Cleanses, becoming invulnerable for 2 seconds, exploding afterwards.",
+  "action": "projectile",
+  "color": "#004cb4",
+  "icon": "CHASM",
+  "sound": "triplet",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 300,
+  "throttle": true,
+  "debuff": true,
+  "projectile": {
+    "density": 5,
+    "ccd": false,
+    "radius": 0.001,
+    "speed": 0.1,
+    "maxTicks": 120,
+    "damage": 0,
+    "collideWith": 0,
+    "expireOn": 0,
+    "sound": "supernova2",
+    "color": "#004cb4",
+    "detonate": {
+      "damage": 10,
+      "lifeSteal": 0,
+      "radius": 0.035,
+      "minImpulse": 0,
+      "maxImpulse": 0,
+      "renderTicks": 30
+    },
+    "projectileBuffs": [
+      {
+        "type": "movement",
+        "maxTicks": 120,
+        "movementProportion": 0.8
+      },
+      {
+        "type": "mass",
+        "cleansable": false,
+        "maxTicks": 120,
+        "radius": 0.021,
+        "restrictCollideWith": 0,
+        "sense": 3
+      },
+      {
+        "type": "armor",
+        "maxTicks": 120,
+        "proportion": -1,
+        "cleansable": false,
+        "minHealth": 1
+      },
+      {
+        "type": "cooldown",
+        "minCooldown": 120
+      }
+    ],
+    "behaviours": [
+      {
+        "type": "strafe"
+      },
+      {
+        "type": "homing",
+        "targetType": "self"
+      }
+    ],
+    "renderers": [
+      {
+        "type": "reticule",
+        "color": "#004cb411",
+        "radius": 0.03
+      },
+      {
+        "type": "swirl",
+        "color": "#004cb444",
+        "colorize": 0.1,
+        "radius": 0.02,
+        "ticks": 15,
+        "loopTicks": 20,
+        "numParticles": 2,
+        "particleRadius": 0.006,
+        "glow": 0.2,
+        "shine": 0.2,
+        "vanish": 0.3,
+        "bloom": 0.04,
+        "light": 0.3,
+        "smoke": {
+          "axisMultiplier": 0.3,
+          "isotropicSpeed": 0.07
+        }
+      },
+      {
+        "type": "swirl",
+        "color": "#004cb444",
+        "colorize": 0.1,
+        "radius": 0.02,
+        "ticks": 15,
+        "loopTicks": 120,
+        "numParticles": 3,
+        "particleRadius": 0.006,
+        "glow": 0.2,
+        "shine": 0.2,
+        "vanish": 0.3,
+        "bloom": 0.04,
+        "light": 0.3,
+        "smoke": {
+          "axisMultiplier": 0.3,
+          "isotropicSpeed": 0.07
+        }
+      },
+      {
+        "type": "reticule",
+        "color": "#FF69B4af",
+        "radius": 0.03,
+        "minRadius": 0.0225,
+        "shrinkTicks": 20,
+        "grow": false,
+        "fade": true,
+        "repeat": true
+      }
+    ]
+  }
+}

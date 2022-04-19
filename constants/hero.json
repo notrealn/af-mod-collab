@@ -1,0 +1,17 @@
+{
+  "MoveSpeedPerSecond": 0.12,
+  "MaxSpeed": 1,
+  "Radius": 0.014,
+  "Density": 0.72,
+  "AngularDamping": 100,
+  "Damping": 3,
+  "DamageMitigationTicks": 300,
+  "LifeStealMitigationPerOpponent": 0.3,
+  "CooldownMitigationPerOpponent": 0.3,
+  "MaxMitigationBonuses": 3,
+  "MaxCooldownWaitTicks": 1,
+  "ThrottleTicks": 0,
+  "MaxHealth": 100,
+  "SeparationImpulsePerTick": 0.01,
+  "RevolutionsPerTick": 1
+}

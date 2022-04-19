@@ -1,0 +1,21 @@
+{
+  "id": "sun",
+  "start": [
+    {
+      "volume": 0.25,
+      "stopTime": 1,
+      "attack": 0.25,
+      "decay": 0.25,
+      "startFreq": 10,
+      "stopFreq": 10,
+      "modStartFreq": 500,
+      "modStopFreq": 700,
+      "modStartStrength": 125,
+      "modStopStrength": 125,
+      "tremoloFreq": 3,
+      "tremoloStrength": 0.1,
+      "wave": "sine",
+      "ratios": [1, 1.2, 1.4, 2.4, 3.6]
+    }
+  ]
+}

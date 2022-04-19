@@ -1,0 +1,107 @@
+{
+  "id": "mesow",
+  "name": "Surgical Byproduct",
+  "description": "Create a pool of blood.",
+  "effects": [],
+  "action": "projectile",
+  "color": "#800",
+  "icon": "meso",
+  "sound": "gravity",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 360,
+  "throttle": true,
+  "chargeTicks": 6,
+  "projectile": {
+    "density": 0.0001,
+    "attractable": false,
+    "radius": 0.06,
+    "speed": 0,
+    "hitInterval": 30,
+    "maxTicks": 600,
+    "damage": 1,
+    "lifeSteal": 0.3,
+    "noHit": true,
+    "expireOn": 0,
+    "collideWith": 1,
+    "sensor": true,
+    "buffs": [
+      {
+        "type": "movement",
+        "stack": "horcrux",
+        "maxTicks": 10,
+        "movementProportion": 1,
+        "render": {
+          "color": "#8002",
+          "alpha": 0.3,
+          "glow": 0.7,
+          "ticks": 15,
+          "emissionRadiusFactor": 1,
+          "particleRadius": 0.007,
+          "light": null
+        }
+      }
+    ],
+    "behaviours": [
+      {
+        "type": "accelerate",
+        "maxSpeed": 1.41,
+        "accelerationPerSecond": -0.005
+      },
+      {
+        "type": "spawn",
+        "trigger": {
+          "expire": true
+        },
+        "projectile": {
+          "density": 0.0001,
+          "ccd": false,
+          "attractable": false,
+          "radius": 0.06,
+          "speed": 0,
+          "maxTicks": 5,
+          "damage": 12,
+          "noHit": true,
+          "expireOn": 0,
+          "collideWith": 1,
+          "lifeSteal": 0.3,
+          "sensor": true,
+          "buffs": [],
+          "behaviours": [],
+          "sound": "sun",
+          "color": "#800",
+          "renderers": [
+            {
+              "type": "projectile",
+              "ticks": 12
+            }
+          ]
+        }
+      }
+    ],
+    "sound": "sun1",
+    "color": "#8001",
+    "renderers": [
+      {
+        "type": "reticule",
+        "color": "#8002",
+        "minRadius": 0.059,
+        "radius": 0.06
+      },
+      {
+        "type": "reticule",
+        "color": "#8002",
+        "shrinkTicks": 30,
+        "grow": true,
+        "repeat": true,
+        "fade": true,
+        "minRadius": 0.04,
+        "radius": 0.05
+      },
+      {
+        "type": "projectile",
+        "ticks": 60,
+        "shine": -1
+      }
+    ]
+  }
+}

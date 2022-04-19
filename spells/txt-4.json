@@ -1,0 +1,50 @@
+{
+  "id": "txt-4",
+  "name": "Descarregar",
+  "description": "expulse them.",
+  "untargeted": true,
+  "effects": [
+    {
+      "icon": "fas fa-weight-hanging",
+      "title": "Heavy",
+      "text": "Knockback reduced 75% while overloading."
+    }
+  ],
+  "chargeBuffs": [
+    {
+      "type": "mass",
+      "maxTicks": 30,
+      "channelling": true,
+      "radius": 0.014,
+      "density": 2.16
+    },
+    {
+      "type": "glide",
+      "maxTicks": 30,
+      "channelling": true,
+      "linearDampingMultiplier": 3
+    }
+  ],
+  "detonate": {
+    "damage": 20,
+    "radius": 0.06,
+    "minImpulse": 0.0015,
+    "maxImpulse": 0.00275,
+    "renderTicks": 30
+  },
+  "chargeTicks": 30,
+  "cooldown": 420,
+  "throttle": false,
+  "unlink": true,
+  "interruptibleAfterTicks": 0,
+  "interruptCancel": {
+    "cooldownTicks": 420
+  },
+  "selfDamage": 10,
+  "minSelfHealth": 1,
+  "icon": "txt",
+  "trailTicks": 30,
+  "color": "#f05",
+  "sound": "scourge",
+  "action": "scourge"
+}

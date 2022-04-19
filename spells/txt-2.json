@@ -1,0 +1,128 @@
+{
+  "id": "txt-2",
+  "name": "Conexão",
+  "description": "Eliminate any chance of escaping.",
+  "action": "projectile",
+  "color": "#f05",
+  "icon": "txt",
+  "maxAngleDiffInRevs": 0.01,
+  "cooldown": 180,
+  "throttle": false,
+  "projectile": {
+    "density": 0.001,
+    "radius": 0.005,
+    "speed": 0.65,
+    "restitution": 0,
+    "maxTicks": 90,
+    "damage": 5,
+    "collideWith": 47,
+    "shieldTakesOwnership": false,
+    "bumpable": true,
+    "link": {
+      "linkWith": 47,
+      "impulsePerTick": 0.0000175,
+      "selfFactor": 1,
+      "targetFactor": 1,
+      "minDistance": 0.01,
+      "maxDistance": 0.1,
+      "linkTicks": 5,
+      "render": {
+        "type": "link",
+        "color": "#f00",
+        "fade": "#ff0",
+        "width": 0.002,
+        "toWidth": 0.0001,
+        "glow": 0.4,
+        "bloom": 0.005,
+        "shine": 0.25,
+        "light": true,
+        "strike": {
+          "ticks": 15,
+          "flash": true,
+          "growth": 2
+        }
+      }
+    },
+    "behaviours": [
+      {
+        "type": "expireOnOwnerDeath"
+      }
+    ],
+    "sound": "link",
+    "color": "#4444ff",
+    "renderers": [
+      {
+        "type": "bloom",
+        "radius": 0.015
+      },
+      {
+        "type": "projectile",
+        "color": "#f00",
+        "fade": "#f0f",
+        "ticks": 35,
+        "smoke": 0.2,
+        "light": 0.5
+      },
+      {
+        "type": "ray",
+        "ticks": 15,
+        "fade": "#f0f",
+        "vanish": 1
+      }
+    ],
+    "buffs": [
+      {
+        "type": "burn",
+        "collideWith": 9,
+        "against": 12,
+        "stack": "fire",
+        "hitInterval": 15,
+        "packet": {
+          "damage": 0.5,
+          "lifeSteal": 0.2,
+          "noHit": true
+        },
+        "maxTicks": 180,
+        "resetOnGameStart": true,
+        "render": {
+          "color": "#ff0088",
+          "alpha": 0.049999999999999996,
+          "light": 1,
+          "ticks": 15,
+          "emissionRadiusFactor": 1,
+          "particleRadius": 0.007,
+          "shine": 0.2,
+          "glow": 1,
+          "bloom": 0.03,
+          "vanish": 1
+        }
+      },
+      {
+        "type": "cooldown",
+        "owner": true,
+        "maxTicks": 1,
+        "against": 4,
+        "spellId": "txt-1",
+        "maxCooldown": 0,
+        "sound": "repeater",
+        "color": "#fff"
+      },
+      {
+        "type": "movement",
+        "maxTicks": 30,
+        "movementProportion": 0.1,
+        "render": {
+          "color": "rgba(64, 255, 255, 1)",
+          "alpha": 0.3,
+          "ticks": 15,
+          "emissionRadiusFactor": 1,
+          "particleRadius": 0.01,
+          "shine": 0.2,
+          "glow": 0.7,
+          "bloom": 0.03,
+          "vanish": 1
+        }
+      }
+    ]
+  }
+}
