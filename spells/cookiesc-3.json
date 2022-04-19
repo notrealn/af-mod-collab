@@ -1,111 +1,120 @@
 {
-  "id": "cookiesc-3",
-  "name": "Frosty Shackle",
-  "description": "Freezes the first enemy hit for 2 seconds, inflicting Frostbite.",
-  "effects": [
-    {
-      "icon": "fas fa-key",
-      "title": "Frostbite",
-      "text": "Enemies take 1.5x damage from Icicle."
-    }
-  ],
-  "action": "projectile",
-  "color": "#004cb4",
-  "icon": "CHASM",
-  "sound": "triplet",
-  "maxAngleDiffInRevs": 0.01,
-  "cooldown": 360,
-  "throttle": true,
-  "projectile": {
-    "density": 7,
-    "radius": 0.01,
-    "speed": 0.8,
-    "maxTicks": 30,
-    "damage": 4,
-    "lifeSteal": 0.3,
-    "sensor": true,
-    "categories": 2,
-    "sound": "triplet",
-    "soundHit": "standard",
-    "color": "#004cb4",
-    "source": "CHASMpassive",
-    "projectileBuffs": [
-      {
-        "type": "movement",
-        "movementProportion": 0.2,
-        "maxTicks": 20
-      }
-    ],
-    "buffs": [
-      {
-        "type": "movement",
-        "movementProportion": 0.01,
-        "maxTicks": 120,
-        "against": 12,
-        "render": {
-          "color": "#004cb4",
-          "alpha": 0.6,
-          "ticks": 10,
-          "emissionRadiusFactor": 0,
-          "particleRadius": 0.012,
-          "shine": 0.2,
-          "glow": 0.5,
-          "bloom": 0.01,
-          "bloomLow": 0.01,
-          "light": 1,
-          "smoke": {
-            "axisMultiplier": 1,
-            "isotropicSpeed": 0.25
-          }
-        }
-      },
-      {
-        "type": "armor",
-        "maxTicks": 120,
-        "proportion": 1.5,
-        "source": "CHASMpassive",
-        "against": 12,
-        "maxStacks": 1,
-        "stack": "CHASMpassive"
-      }
-    ],
-    "renderers": [
-      {
-        "type": "bloom",
-        "radius": 0.02
-      },
-      {
-        "type": "polygon",
-        "color": "#004cb423",
-        "numPoints": 4,
-        "radiusMultiplier": 2,
-        "revolutionInterval": 15,
-        "ticks": 120,
-        "light": 1,
-        "shadow": 0.5
-      },
-      {
-        "type": "projectile",
-        "ticks": 90,
-        "smoke": {
-          "axisMultiplier": 0.01,
-          "isotropicSpeed": 0.07
-        },
-        "vanish": 1,
-        "minTicks": 2
-      },
-      {
-        "type": "link",
-        "color": "#004cb4",
-        "colorize": 0.3,
-        "width": 0.004,
-        "toWidth": 0.005,
-        "glow": 0.4,
-        "bloom": 0.005,
-        "shadow": 0.5,
-        "shine": 0.25,
-        "light": true
-      }
-    ]
-  }
+	"id": "cookiesc-3",
+	"name": "Frosty Shackle",
+	"description": "Freezes the first enemy hit for 2 seconds, inflicting Frostbite.",
+	"effects": [
+		{
+			"icon": "fas fa-icicles",
+			"title": "Frostbite",
+			"text": "Enemies take 50% more damage from Slap'cicle."
+		}
+	],
+	"action": "projectile",
+	"color": "#004cb4",
+	"icon": "CHASM",
+	"sound": "triplet",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 360,
+	"throttle": true,
+	"projectile": {
+		"density": 7,
+		"radius": 0.01,
+		"speed": 0.8,
+		"maxTicks": 40,
+		"damage": 1,
+		"lifeSteal": 0,
+		"sensor": true,
+		"categories": 2,
+		"sound": "triplet",
+		"soundHit": "standard",
+		"color": "#004cb4",
+		"source": "CHASMblizzard",
+		"projectileBuffs": [
+			{
+				"type": "movement",
+				"movementProportion": 0.2,
+				"maxTicks": 20
+			}
+		],
+		"buffs": [
+			{
+				"type": "movement",
+				"movementProportion": 0.01,
+				"maxTicks": 120,
+				"against": 12
+			},
+			{
+				"type": "armor",
+				"maxTicks": 120,
+				"proportion": 0.5,
+				"source": "CHASMpassive",
+				"against": 12,
+				"maxStacks": 1,
+				"stack": "CHASMpassive",
+				"render": {
+					"color": "#004cb4",
+					"alpha": 0.6,
+					"ticks": 10,
+					"emissionRadiusFactor": 0,
+					"particleRadius": 0.012,
+					"shine": 0.2,
+					"glow": 0.5,
+					"bloom": 0.01,
+					"bloomLow": 0.01,
+					"light": 1,
+					"smoke": {
+						"axisMultiplier": 1,
+						"isotropicSpeed": 0.25
+					}
+				}
+			},
+			{
+				"type": "armor",
+				"maxTicks": 120,
+				"proportion": 9,
+				"source": "CHASMblizzard",
+				"against": 12,
+				"maxStacks": 1,
+				"stack": "CHASMblizzard"
+			}
+		],
+		"renderers": [
+			{
+				"type": "bloom",
+				"radius": 0.02
+			},
+			{
+				"type": "polygon",
+				"color": "#004cb423",
+				"numPoints": 4,
+				"radiusMultiplier": 2,
+				"revolutionInterval": 15,
+				"ticks": 120,
+				"light": 1,
+				"shadow": 0.5
+			},
+			{
+				"type": "projectile",
+				"ticks": 90,
+				"smoke": {
+					"axisMultiplier": 0.01,
+					"isotropicSpeed": 0.07
+				},
+				"vanish": 1,
+				"minTicks": 2
+			},
+			{
+				"type": "link",
+				"color": "#004cb4",
+				"colorize": 0.3,
+				"width": 0.004,
+				"toWidth": 0.005,
+				"glow": 0.4,
+				"bloom": 0.005,
+				"shadow": 0.5,
+				"shine": 0.25,
+				"light": true
+			}
+		]
+	}
 }

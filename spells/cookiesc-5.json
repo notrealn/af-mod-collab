@@ -1,122 +1,182 @@
 {
-  "id": "cookiesc-5",
-  "name": "Blizzard",
-  "description": "Unleashes a blizzard, dealing 1 damage every second and slowing by 1%, inflicting Frostbite. Blizzard lasts up to 20 seconds. You gain a stack of Brittle Armor every time an enemy is damaged.",
-  "action": "projectile",
-  "color": "#004cb4",
-  "icon": "CHASM",
-  "sound": "triplet",
-  "maxAngleDiffInRevs": 0.01,
-  "cooldown": 480,
-  "throttle": true,
-  "debuff": true,
-  "projectile": {
-    "density": 0.1,
-    "radius": 0.085,
-    "speed": 0,
-    "maxTicks": 480,
-    "damage": 1,
-    "selfPassthrough": true,
-    "lifeSteal": 0.3,
-    "categories": 2,
-    "color": "#004cb4",
-    "sensor": true,
-    "collideWith": 1,
-    "expireOn": 0,
-    "hitInterval": 60,
-    "buffs": [
-      {
-        "type": "movement",
-        "maxTicks": 120,
-        "movementProportion": 0.99,
-        "against": 12,
-        "render": {
-          "color": "#004cb4",
-          "alpha": 0.1,
-          "ticks": 10,
-          "emissionRadiusFactor": 0,
-          "particleRadius": 0.012,
-          "shine": 0.2,
-          "glow": 0.5,
-          "bloom": 0.01,
-          "bloomLow": 0.01,
-          "light": 1,
-          "smoke": {
-            "axisMultiplier": 1,
-            "isotropicSpeed": 0.25
-          }
-        }
-      },
-      {
-        "type": "armor",
-        "maxTicks": 120,
-        "proportion": 1.5,
-        "source": "CHASMpassive",
-        "against": 12,
-        "maxStacks": 1,
-        "stack": "CHASMpassive"
-      },
-      {
-        "type": "burn",
-        "stack": "cookiesc-1",
-        "hitInterval": 120,
-        "packet": {
-          "damage": -1,
-          "lifeSteal": 0,
-          "noHit": true
-        },
-        "against": 12,
-        "owner": true,
-        "cleansable": false,
-        "maxTicks": 240,
-        "resetOnGameStart": true,
-        "render": {
-          "color": "#004cb4",
-          "alpha": 0.1,
-          "ticks": 10,
-          "emissionRadiusFactor": 0,
-          "particleRadius": 0.012,
-          "shine": 0.2,
-          "glow": 0.5,
-          "bloom": 0.01,
-          "bloomLow": 0.01,
-          "light": 1
-        }
-      }
-    ],
-    "partialDamage": {
-      "initialMultiplier": 0.01,
-      "ticks": 60
-    },
-    "partialBuffDuration": {
-      "initialMultiplier": 2,
-      "ticks": 60
-    },
-    "renderers": [
-      {
-        "type": "projectile",
-        "ticks": 1,
-        "color": "#004cb411",
-        "smoke": {
-          "axisMultiplier": 0.01,
-          "isotropicSpeed": 0.07
-        },
-        "vanish": 1
-      },
-      {
-        "type": "swirl",
-        "color": "#004cb411",
-        "radius": 0.1,
-        "ticks": 20,
-        "loopTicks": 60,
-        "numParticles": 7,
-        "particleRadius": 0.01,
-        "light": true,
-        "glow": 0.25,
-        "smoke": 0.3,
-        "fade": "#000000",
-        "vanish": 1
-      }
-    ]
-  }
+	"id": "cookiesc-5",
+	"name": "Devastating Blizzard",
+	"description": "Unleashes a blizzard, gaining a stack of Brittle Armor for each enemy in it when summoned. Blizzard does 1 damage every second and slows 1%, inflicting Frostbite and lasts up to 8 seconds.",
+	"action": "projectile",
+	"color": "#004cb4",
+	"icon": "CHASM",
+	"sound": "triplet",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 480,
+	"throttle": true,
+	"debuff": true,
+	"effects": [
+		{
+			"icon": "fas fa-icicles",
+			"title": "Frostbite",
+			"text": "Enemies take 50% more damage from Slap'cicle."
+		},
+		{
+			"icon": "fas fa-icicles",
+			"title": "... it's snowing spears!",
+			"text": "Shackled enemies takes 1000% more damage from Devastating Blizzard."
+		}
+	],
+	"projectile": {
+		"density": 0.1,
+		"radius": 0.085,
+		"speed": 0,
+		"maxTicks": 60,
+		"damage": 1,
+		"selfPassthrough": true,
+		"lifeSteal": 0,
+		"categories": 2,
+		"color": "#004cb4",
+		"sensor": true,
+		"collideWith": 1,
+		"expireOn": 0,
+		"hitInterval": 60,
+		"buffs": [
+			{
+				"type": "burn",
+				"stack": "cookiesc-1",
+				"hitInterval": 30,
+				"packet": {
+					"damage": -0.25,
+					"lifeSteal": 0,
+					"noHit": true
+				},
+				"cleansable": false,
+				"maxTicks": 480,
+				"resetOnGameStart": true,
+				"owner": true,
+				"against": 12,
+				"render": {
+					"color": "#004cb4",
+					"alpha": 0.1,
+					"ticks": 1,
+					"emissionRadiusFactor": 0,
+					"particleRadius": 0.017,
+					"shine": 0.2,
+					"glow": 0.5,
+					"bloom": 0.01,
+					"bloomLow": 0.01,
+					"light": null
+				}
+			}
+		],
+		"partialDamage": {
+			"initialMultiplier": 0.01,
+			"ticks": 60
+		},
+		"behaviours": [
+			{
+				"type": "spawn",
+				"trigger": {
+					"expire": true
+				},
+				"projectile": {
+					"density": 0.1,
+					"radius": 0.085,
+					"speed": 0,
+					"maxTicks": 480,
+					"damage": 1,
+					"selfPassthrough": true,
+					"lifeSteal": 0,
+					"categories": 2,
+					"color": "#004cb4",
+					"sensor": true,
+					"collideWith": 1,
+					"expireOn": 0,
+					"hitInterval": 60,
+					"source": "CHASMblizzard",
+					"buffs": [
+						{
+							"type": "movement",
+							"movementProportion": 0.99,
+							"maxTicks": 120,
+							"against": 12
+						},
+						{
+							"type": "armor",
+							"maxTicks": 120,
+							"proportion": 0.5,
+							"source": "CHASMpassive",
+							"against": 12,
+							"maxStacks": 1,
+							"stack": "CHASMpassive",
+							"render": {
+								"color": "#004cb4",
+								"alpha": 0.6,
+								"ticks": 10,
+								"emissionRadiusFactor": 0,
+								"particleRadius": 0.012,
+								"shine": 0.2,
+								"glow": 0.5,
+								"bloom": 0.01,
+								"bloomLow": 0.01,
+								"light": 1,
+								"smoke": {
+									"axisMultiplier": 1,
+									"isotropicSpeed": 0.25
+								}
+							}
+						}
+					],
+					"renderers": [
+						{
+							"type": "projectile",
+							"ticks": 1,
+							"color": "#004cb411",
+							"smoke": {
+								"axisMultiplier": 0.01,
+								"isotropicSpeed": 0.07
+							},
+							"vanish": 1
+						},
+						{
+							"type": "swirl",
+							"color": "#004cb411",
+							"radius": 0.1,
+							"ticks": 20,
+							"loopTicks": 60,
+							"numParticles": 7,
+							"particleRadius": 0.01,
+							"light": true,
+							"glow": 0.25,
+							"smoke": 0.3,
+							"fade": "#000000",
+							"vanish": 1
+						}
+					]
+				}
+			}
+		],
+		"renderers": [
+			{
+				"type": "projectile",
+				"ticks": 1,
+				"color": "#004cb411",
+				"smoke": {
+					"axisMultiplier": 0.01,
+					"isotropicSpeed": 0.07
+				},
+				"vanish": 1
+			},
+			{
+				"type": "swirl",
+				"color": "#004cb411",
+				"radius": 0.1,
+				"ticks": 20,
+				"loopTicks": 60,
+				"numParticles": 7,
+				"particleRadius": 0.01,
+				"light": true,
+				"glow": 0.25,
+				"smoke": 0.3,
+				"fade": "#000000",
+				"vanish": 1
+			}
+		]
+	}
 }
