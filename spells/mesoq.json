@@ -28,11 +28,28 @@
     "categories": 2,
     "sound": "pea",
     "color": "#800",
-    "behaviours": [
+    "behaviours": [           
       {
-        "type": "homing",
-        "targetType": "self",
-        "maxTurnProportion": 0.2,
+        "type": "aura",
+        "radius": 0.01,
+        "hitInterval": 1,
+        "buffs": [
+					{
+						"type": "movement",
+						"against": 12,
+						"collideWith": 1,
+						"maxTicks": 60,
+						"render": {
+							"color": "#800",
+							"alpha": 0.3,
+							"ticks": 15,
+							"emissionRadiusFactor": 0.3,
+							"particleRadius": 0.01,
+							"light": 1
+						},
+						"movementProportion": 0.9
+					}
+        ],
         "trigger": {
           "collideWith": 16384,
           "against": 1
