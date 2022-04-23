@@ -18,7 +18,7 @@
     "sense": 1,
     "speed": 0.7,
     "maxTicks": 120,
-    "damage": 2.5,
+    "damage": 4,
     "expireAgainstObjects": 14,
     "collideWith": 65534,
     "expireOn": 49150,
