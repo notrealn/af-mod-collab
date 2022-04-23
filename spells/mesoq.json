@@ -38,7 +38,7 @@
 						"type": "movement",
 						"against": 12,
 						"collideWith": 1,
-						"maxTicks": 60,
+						"maxTicks": 300,
 						"render": {
 							"color": "#800",
 							"alpha": 0.3,
@@ -47,7 +47,7 @@
 							"particleRadius": 0.01,
 							"light": 1
 						},
-						"movementProportion": 0.9
+						"movementProportion": 0.75
 					}
         ],
         "trigger": {
