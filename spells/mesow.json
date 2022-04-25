@@ -1,7 +1,7 @@
 {
   "id": "mesow",
   "name": "Surgical Byproduct",
-  "description": "Create a pool of blood.",
+  "description": "Create a silencing pool of blood.",
   "effects": [],
   "action": "projectile",
   "color": "#800",
@@ -26,10 +26,9 @@
     "sensor": true,
     "buffs": [
       {
-        "type": "movement",
-        "stack": "horcrux",
-        "maxTicks": 10,
-        "movementProportion": 1,
+        "type": "cooldown",
+        "minCooldown": 30,
+        "maxTicks": 30,
         "render": {
           "color": "#8002",
           "alpha": 0.3,
@@ -42,41 +41,6 @@
       }
     ],
     "behaviours": [
-      {
-        "type": "accelerate",
-        "maxSpeed": 1.41,
-        "accelerationPerSecond": -0.005
-      },
-      {
-        "type": "spawn",
-        "trigger": {
-          "expire": true
-        },
-        "projectile": {
-          "density": 0.0001,
-          "ccd": false,
-          "attractable": false,
-          "radius": 0.06,
-          "speed": 0,
-          "maxTicks": 5,
-          "damage": 12,
-          "noHit": true,
-          "expireOn": 0,
-          "collideWith": 1,
-          "lifeSteal": 0.3,
-          "sensor": true,
-          "buffs": [],
-          "behaviours": [],
-          "sound": "sun",
-          "color": "#800",
-          "renderers": [
-            {
-              "type": "projectile",
-              "ticks": 12
-            }
-          ]
-        }
-      }
     ],
     "sound": "sun1",
     "color": "#8001",
