@@ -1,79 +1,121 @@
 {
-  "id": "txt-3",
-  "name": "Medo",
-  "description": "Make them feel the agony",
-  "action": "projectile",
-  "color": "#f05",
-  "icon": "txt",
-  "sound": "whirlwind",
-  "maxAngleDiffInRevs": 0.01,
-  "cooldown": 450,
-  "throttle": true,
-  "chargeTicks": 6,
-  "projectile": {
-    "categories": 4,
-    "ccd": false,
-    "density": 0.0001,
-    "radius": 0.065,
-    "speed": 0.05,
-    "maxTicks": 180,
-    "damage": 0,
-    "collideWith": 1,
-    "expireOn": 0,
-    "swappable": false,
-    "sensor": true,
-    "noKnockback": true,
-    "hitInterval": 15,
-    "buffs": [
-      {
-        "type": "movement",
-        "stack": "whirlwind",
-        "movementProportion": 0.75,
-        "maxTicks": 16,
-        "against": 12,
-        "render": {
-          "color": "rgba(50, 0, 0, 1)",
-          "alpha": 0.1,
-          "ticks": 15,
-          "emissionRadiusFactor": 1,
-          "particleRadius": 0.01,
-          "shine": 0.2,
-          "glow": 0.7,
-          "bloom": 0,
-          "vanish": 1
-        }
-      }
-    ],
-    "sound": "whirlwind",
-    "color": "#f05",
-    "renderers": [
-      {
-        "type": "bloom",
-        "radius": 0.07,
-        "color": "#0001",
-        "light": null
-      },
-      {
-        "type": "swirl",
-        "color": "#f061",
-        "radius": 0.03,
-        "ticks": 60,
-        "loopTicks": 13,
-        "numParticles": 2,
-        "particleRadius": 0.03,
-        "light": null,
-        "glow": 0.7,
-        "shine": 0.2,
-        "smoke": 1.3,
-        "fade": "#f000",
-        "vanish": 1
-      },
-      {
-        "type": "strike",
-        "ticks": 20,
-        "flash": true,
-        "growth": 0.1
-      }
-    ]
-  }
+	"id": "txt-3",
+	"name": "Medo",
+	"description": "Make them feel the agony",
+	"action": "projectile",
+	"color": "#f05",
+	"icon": "txt",
+	"sound": "whirlwind",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 450,
+	"throttle": true,
+	"chargeTicks": 6,
+	"projectile": {
+		"categories": 4,
+		"ccd": false,
+		"density": 0.0001,
+		"radius": 0.065,
+		"speed": 0.07,
+		"maxTicks": 300,
+		"damage": 5,
+		"collideWith": 1,
+		"expireOn": 0,
+		"swappable": false,
+		"sensor": true,
+		"noKnockback": true,
+		"hitInterval": 30,
+		"buffs": [
+			{
+				"type": "movement",
+				"stack": "whirlwind",
+				"movementProportion": 0.5,
+				"maxTicks": 15,
+				"against": 12,
+				"render": {
+					"color": "rgba(50, 0, 0, 1)",
+					"alpha": 0.1,
+					"ticks": 15,
+					"emissionRadiusFactor": 1,
+					"particleRadius": 0.01,
+					"shine": 0.2,
+					"glow": 0.7,
+					"bloom": 0,
+					"vanish": 1
+				}
+			}
+		],
+		"sound": "whirlwind",
+		"color": "#f05",
+		"renderers": [
+			{
+				"type": "bloom",
+				"radius": 0.07,
+				"color": "#0001",
+				"light": null
+			},
+			{
+				"type": "swirl",
+				"color": "#f061",
+				"radius": 0.03,
+				"ticks": 20,
+				"loopTicks": 5,
+				"numParticles": 2,
+				"particleRadius": 0.03,
+				"light": null,
+				"glow": 0.7,
+				"shine": 0.2,
+				"smoke": 1.3,
+				"fade": "#f000",
+				"vanish": 1
+			},
+			{
+				"type": "swirl",
+				"color": "#f06",
+				"radius": 0.05,
+				"ticks": 20,
+				"loopTicks": 80,
+				"numParticles": 6,
+				"particleRadius": 0.001,
+				"light": 1,
+				"glow": 0.7,
+				"smoke": 0.5,
+				"fade": "#f000",
+				"vanish": 1
+			},
+			{
+				"type": "swirl",
+				"color": "#f06",
+				"radius": 0.075,
+				"ticks": 20,
+				"loopTicks": 30,
+				"numParticles": 1,
+				"particleRadius": 0.001,
+				"light": 1,
+				"glow": 0.7,
+				"smoke": 0.5,
+				"fade": "#00f0",
+				"vanish": 1
+			},
+			{
+				"type": "swirl",
+				"color": "#f06",
+				"radius": 0.075,
+				"ticks": 5,
+				"loopTicks": 600000,
+				"numParticles": 1,
+				"particleRadius": 0.001,
+				"light": 1,
+				"glow": 0.7,
+				"smoke": 0.5,
+				"fade": "#00f0",
+				"vanish": 1
+			},
+			{
+				"type": "strike",
+				"ticks": 20,
+				"flash": true,
+				"growth": 0.1
+			}
+		]
+	}
 }
