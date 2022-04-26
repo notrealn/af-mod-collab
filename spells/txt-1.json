@@ -1,94 +1,30 @@
 {
-  "id": "txt-1",
-  "name": "O que o olho não vê...",
-  "description": "destroy their logic, then come back once you're done.",
-  "untargeted": true,
-  "cooldown": 600,
-  "throttle": false,
-  "icon": "txt",
-  "color": "#f05",
-  "action": "thrust",
-  "sound": "blaze",
-  "range": 0.4,
-  "speed": 3,
-  "damageTemplate": {
-    "damage": 0,
-    "lifeSteal": 0
-  },
-  "buffs": [
-    {
-      "type": "mass",
-      "cleansable": false,
-      "channelling": true,
-      "maxTicks": 60,
-      "radius": 0.005,
-      "restrictCollideWith": 16,
-      "appendCollideWith": 16,
-      "sense": 3,
-      "render": {
-        "color": "#f0c",
-        "selfColor": true,
-        "numParticles": 0,
-        "particleRadius": 0,
-        "ticks": 1,
-        "bloom": 0.03,
-        "glow": 0.5,
-        "decay": true
-      }
-    }
-  ],
-  "projectileInterval": 300,
-  "projectile": {
-    "density": 1,
-    "ccd": false,
-    "collideWith": 0,
-    "expireOn": 1,
-    "sensor": true,
-    "swappable": false,
-    "bumpable": false,
-    "selfPassthrough": true,
-    "radius": 0.015,
-    "speed": 0,
-    "maxTicks": 60,
-    "damage": 0,
-    "lifeSteal": 0,
-    "detonate": {
-      "damage": 0,
-      "lifeSteal": 0,
-      "radius": 0.05,
-      "minImpulse": 0,
-      "maxImpulse": 0,
-      "swapWith": 29,
-      "renderTicks": 15
-    },
-    "behaviours": [
-      {
-        "type": "expireOnOwnerDeath"
-      }
-    ],
-    "color": "#ff0044",
-    "renderers": [
-      {
-        "type": "bloom",
-        "ownerColor": true,
-        "radius": 0.015
-      },
-      {
-        "type": "projectile",
-        "ticks": 10,
-        "radiusMultiplier": 0.5,
-        "smoke": {
-          "isotropicSpeed": 0.15
-        },
-        "vanish": 1,
-        "ownerColor": true
-      },
-      {
-        "type": "strike",
-        "ticks": 30,
-        "flash": true,
-        "detonate": 0.01
-      }
-    ]
-  }
+	"id": "txt",
+	"description": "this is a passive btw",
+	"effects": [
+		{
+			"icon": "fas fa-shield",
+			"title": "Voidborn",
+			"text": "20% reduced void damage, but 10% fragile to normal damage."
+		}
+	],
+	"passive": true,
+	"untargeted": true,
+	"cooldown": 1,
+	"buffs": [
+		{
+			"type": "armor",
+			"source": "lava",
+			"passive": true,
+			"proportion": -0.3
+		},
+		{
+			"type": "armor",
+			"passive": true,
+			"proportion": 0.1
+		}
+	],
+	"icon": "txt",
+	"color": "#f05",
+	"action": "buff"
 }
