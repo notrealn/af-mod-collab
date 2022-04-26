@@ -1,7 +1,30 @@
 {
-  "id": "txt",
-  "icon": "txt",
-  "description": "RUN, WALK, CRAWL! FEAR ME!",
-  "passive": true,
-  "color": "#f0a"
+	"id": "txt",
+	"description": "this is a passive btw",
+	"effects": [
+		{
+			"icon": "fas fa-shield",
+			"title": "Voidborn",
+			"text": "20% reduced void damage, but 10% fragile to normal damage."
+		}
+	],
+	"passive": true,
+	"untargeted": true,
+	"cooldown": 1,
+	"buffs": [
+		{
+			"type": "armor",
+			"source": "lava",
+			"passive": true,
+			"proportion": -0.3
+		},
+		{
+			"type": "armor",
+			"passive": true,
+			"proportion": 0.1
+		}
+	],
+	"icon": "txt",
+	"color": "#f05",
+	"action": "buff"
 }
