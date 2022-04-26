@@ -1,30 +1,110 @@
 {
-	"id": "txt",
-	"description": "this is a passive btw",
-	"effects": [
-		{
-			"icon": "fas fa-shield",
-			"title": "Voidborn",
-			"text": "20% reduced void damage, but 10% fragile to normal damage."
-		}
-	],
-	"passive": true,
+	"id": "txt-1",
+	"name": "O que o olho não vê...",
+	"description": "Dash forward, leaving behind a portal that swaps your position with enemies on it.",
 	"untargeted": true,
-	"cooldown": 1,
-	"buffs": [
-		{
-			"type": "armor",
-			"source": "lava",
-			"passive": true,
-			"proportion": -0.3
-		},
-		{
-			"type": "armor",
-			"passive": true,
-			"proportion": 0.1
-		}
-	],
+	"cooldown": 600,
+	"throttle": false,
 	"icon": "txt",
 	"color": "#f05",
-	"action": "buff"
+	"action": "thrust",
+	"sound": "txtdash",
+	"range": 0.4,
+	"speed": 7,
+	"damageTemplate": {
+		"damage": 0,
+		"lifeSteal": 0
+	},
+	"buffs": [
+		{
+			"type": "mass",
+			"cleansable": false,
+			"channelling": true,
+			"maxTicks": 60,
+			"radius": 0.005,
+			"restrictCollideWith": 16,
+			"appendCollideWith": 16,
+			"sense": 3,
+			"render": {
+				"color": "#f0c",
+				"selfColor": true,
+				"numParticles": 0,
+				"particleRadius": 0,
+				"ticks": 1,
+				"bloom": 0.03,
+				"glow": 0.5,
+				"decay": true
+			}
+		}
+	],
+	"projectileInterval": 300,
+	"projectile": {
+		"density": 1,
+		"ccd": false,
+		"collideWith": 1,
+		"expireOn": 1,
+		"sensor": true,
+		"swappable": false,
+		"bumpable": false,
+		"selfPassthrough": true,
+		"radius": 0.015,
+		"speed": 0,
+		"maxTicks": 60,
+		"damage": 0,
+		"lifeSteal": 0,
+		"detonate": {
+			"damage": 0,
+			"lifeSteal": 0,
+			"radius": 0.05,
+			"minImpulse": 0,
+			"maxImpulse": 0,
+			"swapWith": 29,
+			"renderTicks": 15
+		},
+		"behaviours": [
+			{
+				"type": "expireOnOwnerDeath"
+			}
+		],
+		"color": "#ff0044",
+		"renderers": [
+			{
+				"type": "bloom",
+				"radius": 0.015
+			},
+			{
+				"type": "projectile",
+				"ticks": 26,
+				"color": "#f00",
+				"fade": "#f0f",
+				"radiusMultiplier": 0.15,
+				"smoke": {
+					"isotropicSpeed": 0.3
+				},
+				"vanish": 1,
+				"light": null
+			},
+			{
+				"type": "reticule",
+				"color": "#f002",
+				"minRadius": 0.05,
+				"radius": 0.05
+			},
+			{
+				"type": "reticule",
+				"color": "#f002",
+				"grow": true,
+				"minRadius": 0,
+				"remainingTicks": 60,
+				"shrinkTicks": 60,
+				"radius": 0.05
+			},
+			{
+				"type": "strike",
+				"ticks": 30,
+				"flash": true,
+				"detonate": 0.01
+			}
+		]
+	}
 }
