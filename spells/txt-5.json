@@ -1,104 +1,115 @@
 {
-  "id": "txt-5",
-  "name": "Medo",
-  "description": "proceed to disrupt their sanity.",
-  "effects": [
-    {
-      "icon": "fas fa-running",
-      "title": "Fast",
-      "text": "Gain a 20% movement speed boost."
-    },
-    {
-      "icon": "fas fa-hand-paper",
-      "title": "Interruptible",
-      "text": "The spirits and speed boost will be cancelled if you are hit, or if you cast another spell."
-    }
-  ],
-  "action": "spray",
-  "color": "#f05",
-  "icon": "txt",
-  "maxAngleDiffInRevs": 0.01,
-  "cooldown": 600,
-  "throttle": true,
-  "movementProportionWhileChannelling": 1,
-  "interruptibleAfterTicks": 0,
-  "strikeCancel": {},
-  "maxChannellingTicks": 300,
-  "jitterRatio": 0,
-  "intervalTicks": 30,
-  "lengthTicks": 120,
-  "buffs": [
-    {
-      "type": "movement",
-      "maxTicks": 450,
-      "movementProportion": 1.2,
-      "channelling": true,
-      "render": {
-        "color": "#8800ff",
-        "alpha": 0.2,
-        "heroColor": true,
-        "ticks": 30,
-        "emissionRadiusFactor": 0,
-        "particleRadius": 0.014,
-        "shine": 0.5,
-        "glow": 1,
-        "vanish": 1,
-        "decay": true
-      }
-    }
-  ],
-  "projectile": {
-    "density": 1,
-    "ccd": false,
-    "radius": 0.002,
-    "speed": 0.75,
-    "maxTicks": 180000,
-    "hitInterval": 30,
-    "damage": 5,
-    "lifeSteal": 0.25,
-    "collideWith": 17,
-    "expireOn": 1,
-    "swappable": false,
-    "selfPassthrough": true,
-    "shieldTakesOwnership": false,
-    "destructible": {
-      "against": 12
-    },
-    "behaviours": [
-      {
-        "type": "strafe",
-        "maxSpeed": 0.15
-      },
-      {
-        "type": "homing",
-        "revolutionsPerSecond": 1,
-        "maxTurnProportion": 0.15,
-        "minDistanceToTarget": 0.02,
-        "targetType": "self"
-      }
-    ],
-    "sound": "halo",
-    "soundHit": "halo",
-    "color": "#f0f",
-    "renderers": [
-      {
-        "type": "bloom",
-        "radius": 0.01
-      },
-      {
-        "type": "ray",
-        "ticks": 10,
-        "fade": "#f00",
-        "glow": 0,
-        "vanish": 1
-      },
-      {
-        "type": "strike",
-        "ticks": 5,
-        "growth": 1.1,
-        "flash": true,
-        "numParticles": 2
-      }
-    ]
-  }
+	"id": "txt-5",
+	"name": "Medo",
+	"description": "proceed to disrupt their sanity.",
+	"effects": [
+		{
+			"icon": "fas fa-running",
+			"title": "Fast",
+			"text": "Gain a 20% movement speed boost."
+		},
+		{
+			"icon": "fas fa-hand-paper",
+			"title": "Interruptible",
+			"text": "The spirits and speed boost will be cancelled if you are hit, or if you cast another spell."
+		}
+	],
+	"action": "spray",
+	"color": "#f05",
+	"icon": "txt",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 600,
+	"throttle": true,
+	"movementProportionWhileChannelling": 1,
+	"interruptibleAfterTicks": 1,
+	"strikeCancel": {},
+	"maxChannellingTicks": 300,
+	"jitterRatio": 0,
+	"intervalTicks": 15,
+	"lengthTicks": 60,
+	"buffs": [
+		{
+			"type": "movement",
+			"maxTicks": 300,
+			"movementProportion": 1.5,
+			"channelling": true,
+			"decay": true,
+			"render": {
+				"color": "#ff00ff",
+				"alpha": 0.2,
+				"ticks": 30,
+				"emissionRadiusFactor": 0,
+				"particleRadius": 0.014,
+				"shine": 0.5,
+				"glow": 1,
+				"vanish": 1,
+				"decay": true
+			}
+		}
+	],
+	"projectile": {
+		"density": 1,
+		"ccd": false,
+		"radius": 0.002,
+		"speed": 0.75,
+		"maxTicks": 180000000,
+		"hitInterval": 15,
+		"damage": 2,
+		"lifeSteal": 2,
+		"collideWith": 17,
+		"expireOn": 1,
+		"swappable": false,
+		"selfPassthrough": true,
+		"shieldTakesOwnership": false,
+		"destructible": {
+			"against": 12
+		},
+		"behaviours": [
+			{
+				"type": "strafe",
+				"maxSpeed": 0.15
+			},
+			{
+				"type": "homing",
+				"revolutionsPerSecond": 1,
+				"maxTurnProportion": 0.1,
+				"minDistanceToTarget": 0.02,
+				"targetType": "self"
+			}
+		],
+		"sound": "halo",
+		"soundHit": "halo",
+		"color": "#f0f",
+		"renderers": [
+			{
+				"type": "bloom",
+				"radius": 0.01
+			},
+			{
+				"type": "ray",
+				"ticks": 10,
+				"fade": "#f00",
+				"glow": 0,
+				"vanish": 1
+			},
+			{
+				"type": "link",
+				"color": "#f065",
+				"colorize": 0.3,
+				"width": 0.0015,
+				"toWidth": 0.003,
+				"glow": 0.3,
+				"bloom": 0.01,
+				"shine": 0.25,
+				"light": true
+			},
+			{
+				"type": "strike",
+				"ticks": 5,
+				"growth": 1.1,
+				"flash": true,
+				"numParticles": 2
+			}
+		]
+	}
 }
