@@ -1,0 +1,19 @@
+{
+	"id": "cookies",
+	"name": "cookies - (Despair class)",
+	"description": "",
+	"effects": [
+		{
+			"icon": "fas fa-box",
+			"title": "",
+			"text": ""
+		}
+	],
+	"passive": true,
+	"untargeted": true,
+	"cooldown": 1,
+	"icon": "cookies",
+	"color": "#670067",
+	"buffs": [],
+	"action": "buff"
+}

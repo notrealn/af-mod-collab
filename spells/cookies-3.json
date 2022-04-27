@@ -1,0 +1,112 @@
+{
+	"id": "cookies-3",
+	"name": "Invocation",
+	"description": "Invokes the Voidscape, inflicting Anguish.",
+	"effects": [
+		{
+			"icon": "fas fa-heart-broken",
+			"title": "Anguish",
+			"text": "Spells cools down 20% slower for 2 seconds. Can stack up to 5 times."
+		}
+	],
+	"action": "projectile",
+	"color": "#670067",
+	"icon": "cookies",
+	"sound": "triplet",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 480,
+	"throttle": true,
+	"maxChannellingTicks": 150,
+	"projectile": {
+		"density": 0.1,
+		"radius": 0.085,
+		"speed": 0,
+		"maxTicks": 120,
+		"damage": 4,
+		"selfPassthrough": true,
+		"lifeSteal": 0,
+		"categories": 2,
+		"color": "#670067",
+		"sensor": true,
+		"collideWith": 1,
+		"expireOn": 0,
+		"hitInterval": 30,
+		"buffs": [
+			{
+				"type": "cooldown",
+				"cooldownRateModifier": -0.8,
+				"spellId": "cookies-3",
+				"maxStacks": 5,
+				"maxTicks": 120,
+				"stack": "cookies-3",
+				"against": 12
+			},
+			{
+				"type": "armor",
+				"maxTicks": 120,
+				"proportion": 1.2,
+				"source": "cookiesANGUISH",
+				"against": 12,
+				"maxStacks": 1,
+				"stack": "cookies-3",
+				"render": {
+					"color": "#670067",
+					"alpha": 0.2,
+					"ticks": 10,
+					"emissionRadiusFactor": 0,
+					"particleRadius": 0.012,
+					"shine": 0.2,
+					"glow": 0.5,
+					"bloom": 0.01,
+					"bloomLow": 0.01,
+					"light": 1,
+					"smoke": {
+						"axisMultiplier": 1,
+						"isotropicSpeed": 0.25
+					}
+				}
+			},
+			{
+				"type": "armor",
+				"maxTicks": 999999,
+				"proportion": 0.5,
+				"against": 12,
+				"owner": true,
+				"stack": "cookies-1",
+				"source": "cookies-1",
+				"render": {
+					"color": "#670067",
+					"alpha": 0.1,
+					"ticks": 1,
+					"emissionRadiusFactor": 0,
+					"particleRadius": 0.017,
+					"shine": 0.2,
+					"glow": 0.5,
+					"bloom": 0.01,
+					"bloomLow": 0.01,
+					"light": null
+				}
+			}
+		],
+		"renderers": [
+			{
+				"type": "reticule",
+				"color": "#800080",
+				"radius": 0.09,
+				"minRadius": 0.0825,
+				"shrinkTicks": 13,
+				"grow": true,
+				"fade": true,
+				"repeat": true
+			},
+			{
+				"type": "reticule",
+				"color": "#800080",
+				"radius": 0.09,
+				"minRadius": 0.0825,
+				"shrinkTicks": 10,
+				"startingTicks": 10
+			}
+		]
+	}
+}

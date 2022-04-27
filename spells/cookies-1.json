@@ -1,0 +1,119 @@
+{
+	"id": "cookies-1",
+	"name": "No Hope",
+	"description": "Every inflicted stack of Anguish increases this spell's power by 50%. Casting this spell resets them. This spell heals 7 damage over 2 seconds, cleansing you afterwards. You are unable to cast spells and move 50% slower when healing.",
+	"effects": [],
+	"untargeted": true,
+	"cooldown": 1800,
+	"icon": "cookies",
+	"color": "#670067",
+	"action": "projectile",
+	"chargeTicks": 15,
+	"buffs": [
+		{
+			"type": "burn",
+			"hitInterval": 3,
+			"maxTicks": 120,
+			"packet": {
+				"damage": -0.175,
+				"lifeSteal": 0,
+				"noHit": true,
+				"source": "cookies-1"
+			},
+			"cleansable": false,
+			"render": {
+				"color": "#670067",
+				"alpha": 0.2,
+				"ticks": 1,
+				"emissionRadiusFactor": 0.8,
+				"particleRadius": 0.003,
+				"shine": 0.2,
+				"glow": 0.5,
+				"bloom": 0.01,
+				"bloomLow": 0.01,
+				"light": null
+			}
+		},
+		{
+			"type": "movement",
+			"maxTicks": 120,
+			"movementProportion": 0.5,
+			"render": {
+				"numParticles": 2,
+				"color": "#670067",
+				"ticks": 30,
+				"emissionRadiusFactor": 0.8,
+				"particleRadius": 0.003,
+				"glow": 0.3,
+				"bloom": 0,
+				"vanish": 1,
+				"light": null
+			}
+		},
+		{
+			"type": "cooldown",
+			"maxTicks": 1,
+			"minCooldown": 120
+		}
+	],
+	"projectile": {
+		"density": 7,
+		"radius": 0.5,
+		"speed": 0.1,
+		"maxTicks": 120,
+		"lifeSteal": 0,
+		"sensor": true,
+		"categories": 2,
+		"selfPassthrough": true,
+		"collideWith": 0,
+		"expireOn": 0,
+		"damage": 0,
+		"behaviours": [
+			{
+				"type": "homing",
+				"targetType": "self"
+			},
+			{
+				"type": "expireOnOwnerDeath"
+			},
+			{
+				"type": "strafe"
+			},
+			{
+				"type": "spawn",
+				"trigger": {
+					"expire": true
+				},
+				"projectile": {
+					"density": 7,
+					"radius": 0.01,
+					"speed": 0,
+					"maxTicks": 1,
+					"damage": 0,
+					"lifeSteal": 0,
+					"sensor": true,
+					"categories": 2,
+					"projectileBuffs": [
+						{
+							"type": "debuff",
+							"maxTicks": 1
+						},
+						{
+							"type": "cooldown",
+							"maxTicks": 1,
+							"maxCooldown": 120,
+							"notSpellIds": [
+								"cookies-1"
+							],
+							"color": "#670067"
+						}
+					],
+					"color": "#004cb4",
+					"renderers": []
+				}
+			}
+		],
+		"color": "#004cb4",
+		"renderers": []
+	}
+}
