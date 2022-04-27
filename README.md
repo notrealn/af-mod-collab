@@ -1,6 +1,8 @@
 # af-mod-collab
 
 Make a class to display yourself in this community mod!
+<br>
+Ran by Alzarath's AFCompiler! Make sure to thank him!
 
 ## How to join?
 It's quite simple!
