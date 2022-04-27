@@ -1,0 +1,58 @@
+{
+	"id": "cookies-5",
+	"name": "Empowerment",
+	"effects": [
+		{
+			"icon": "fas fa-heart-broken",
+			"title": "Selfish Gains",
+			"text": "Passively regenerate health over time."
+		},
+		{
+			"icon": "fas fa-street-view",
+			"title": "At End",
+			"text": "You take less damage from the void."
+		},
+		{
+			"icon": "fas fa-burn",
+			"title": "Energy Sources",
+			"text": "Each hit of Desecrate increases the healing from Selfish Gains by 50% for 5 seconds."
+		}
+	],
+	"passive": true,
+	"untargeted": true,
+	"cooldown": 1,
+	"buffs": [
+		{
+			"type": "burn",
+			"hitInterval": 6,
+			"packet": {
+				"damage": -0.1,
+				"lifeSteal": 0,
+				"noHit": true,
+				"source": "cookies-45"
+			},
+			"passive": true,
+			"render": {
+				"color": "#670067",
+				"alpha": 0.2,
+				"ticks": 1,
+				"emissionRadiusFactor": 0,
+				"particleRadius": 0.017,
+				"shine": 0.2,
+				"glow": 0.5,
+				"bloom": 0.01,
+				"bloomLow": 0.01,
+				"light": null
+			}
+		},
+		{
+			"type": "armor",
+			"proportion": -0.2,
+			"source": "lava",
+			"passive": true
+		}
+	],
+	"icon": "cookies",
+	"color": "#670067",
+	"action": "buff"
+}
