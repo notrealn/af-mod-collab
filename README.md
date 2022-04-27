@@ -12,5 +12,6 @@ It's quite simple!
 
 ## Github Info
 Once in a while, the github will be updated with the newest classes and changes. 
+<br>
 **mod_output.json** is the mod file you need in order to create a party on Acolytefight.
 Enter the file into Load File on the Modding page.
