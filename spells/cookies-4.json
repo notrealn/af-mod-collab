@@ -1,0 +1,110 @@
+{
+	"id": "cookies-4",
+	"name": "Desecrate",
+	"description": "Unleash a powerful blast. Enemies nearby can feel its power and take damage, increasing Desecrate's damage per enemy hit. Anguished enemies takes 120% bonus damage.",
+	"action": "projectile",
+	"color": "#670067",
+	"icon": "cookies",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 300,
+	"throttle": false,
+	"chargeTicks": 5,
+	"projectile": {
+		"density": 0.001,
+		"radius": 0.006,
+		"linkable": false,
+		"speed": 2,
+		"maxTicks": 120,
+		"collideWith": 1,
+		"expireOn": 0,
+		"sensor": true,
+		"swappable": false,
+		"damage": 0,
+		"color": "#670067",
+		"expireAfterCursorTicks": 5,
+		"source": "cookies-4",
+		"behaviours": [
+			{
+				"type": "homing",
+				"targetType": "self",
+				"revolutionsPerSecond": 2
+			},
+			{
+				"type": "homing",
+				"targetType": "release",
+				"revolutionsPerSecond": 0.3
+			},
+			{
+				"type": "homing",
+				"targetType": "cursor",
+				"revolutionsPerSecond": 0.01
+			},
+			{
+				"type": "aura",
+				"radius": 0.01,
+				"tickInterval": 2,
+				"maxHits": 3,
+				"packet": {
+					"damage": 4,
+					"lifeSteal": 0,
+					"noHit": true,
+					"noKnockback": true,
+					"source": "cookiesANGUISH"
+				},
+				"buffs": [
+					{
+						"type": "movement",
+						"stack": "horcrux",
+						"maxTicks": 10,
+						"movementProportion": 1,
+						"render": {
+							"color": "#670067",
+							"alpha": 0.3,
+							"glow": 0.7,
+							"ticks": 15,
+							"emissionRadiusFactor": 0.1,
+							"particleRadius": 0.013,
+							"light": 1
+						}
+					},
+					{
+						"type": "lifeSteal",
+						"damageMultiplier": 1.5,
+						"maxTicks": 90,
+						"owner": true,
+						"source": "cookies-4"
+					},
+					{
+						"type": "lifeSteal",
+						"damageMultiplier": 1.5,
+						"maxTicks": 300,
+						"owner": true,
+						"source": "cookies-45"
+					}
+				]
+			}
+		],
+		"renderers": [
+			{
+				"type": "bloom",
+				"radius": 0.05
+			},
+			{
+				"type": "projectile",
+				"ticks": 60,
+				"light": null,
+				"smoke": 0.05
+			},
+			{
+				"type": "ray",
+				"light": null,
+				"ticks": 60
+			},
+			{
+				"type": "strike",
+				"ticks": 60,
+				"numParticles": 1
+			}
+		]
+	}
+}
