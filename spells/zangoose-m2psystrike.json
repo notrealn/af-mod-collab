@@ -1,0 +1,86 @@
+{
+	"id": "zangoose-m2psystrike",
+	"name": "Psystrike",
+	"description": "Unleash the force of your mind with a delayed explosion in front of you, dealing massive damage and pushing yourself backward. Hitting Psystrike sets its cooldown to 5 seconds.",
+	"action": "projectile",
+	"color": "#F85888",
+	"icon": "dna1",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 600,
+	"throttle": true,
+	"recoil": 0.4,
+	"projectile": {
+		"density": 5,
+		"ccd": false,
+		"source": "m2psystrike",
+		"radius": 0.001,
+		"speed": 0.2,
+		"maxTicks": 40,
+		"damage": 0,
+		"collideWith": 0,
+		"expireOn": 0,
+		"behaviours": [
+			{
+				"type": "homing",
+				"targetType": "cursor",
+				"trigger": {
+					"afterTicks": 20
+				},
+				"newSpeed": 0,
+				"redirect": true
+			}
+		],
+		"detonate": {
+			"damage": 30,
+			"radius": 0.05,
+			"minImpulse": 0.00004,
+			"maxImpulse": 0.0001,
+			"renderTicks": 30,
+			"buffs": [
+				{
+					"type": "cooldown",
+					"owner": true,
+					"maxTicks": 1,
+					"against": 4,
+					"spellId": "m2psystrike",
+					"maxCooldown": 300,
+					"color": "#f85888"
+				}
+			]
+		},
+		"sound": "supernova",
+		"renderers": [
+			{
+				"type": "bloom",
+				"radius": 0.03
+			},
+			{
+				"type": "projectile",
+				"ticks": 3,
+				"vanish": 1
+			},
+			{
+				"type": "swirl",
+				"color": "#f85888",
+				"radius": 0.05,
+				"ticks": 20,
+				"loopTicks": 13,
+				"numParticles": 6,
+				"particleRadius": 0.004
+			},
+			{
+				"type": "ray",
+				"ticks": 30,
+				"vanish": 1
+			},
+			{
+				"type": "reticule",
+				"color": "#f85888",
+				"minRadius": 0.049,
+				"remainingTicks": 15,
+				"shrinkTicks": 15,
+				"radius": 0.05
+			}
+		]
+	}
+}

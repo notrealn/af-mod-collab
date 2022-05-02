@@ -1,0 +1,16 @@
+{
+	"id": "zangoose-m2blink",
+	"name": "Teleport",
+	"description": "Blink a short distance. Resets when an enemy hits your Substitute clone.",
+	"range": 0.2,
+	"maxAngleDiffInRevs": 1,
+	"cooldown": 480,
+	"throttle": false,
+	"debuff": true,
+	"chargeTicks": 6,
+	"movementProportionWhileCharging": 1,
+	"icon": "dna1",
+	"color": "#F85888",
+	"action": "teleport",
+	"sound": "teleport"
+}
