@@ -1,0 +1,25 @@
+{
+	"id": "zangoose-m2",
+	"name": "Zangoose - Mewtwo",
+	"description": "Genetically engineered to be the ultimate Pokemon capable of mass destruction, but lacks compassion.",
+	"effects": [
+		{
+			"icon": "fas fa-heartbeat",
+			"title": "Weak",
+			"text": "Although your mind is strong, your body is weak. You take 10% increased damage from all sources."
+		}
+	],
+	"passive": true,
+	"untargeted": true,
+	"cooldown": 1,
+	"buffs": [
+		{
+			"type": "armor",
+			"passive": true,
+			"proportion": 0.1
+		}
+	],
+	"icon": "dna1",
+	"color": "#F85888",
+	"action": "buff"
+}
