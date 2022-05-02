@@ -1,0 +1,118 @@
+{
+	"id": "zangoose-m2substitute",
+	"name": "substitute",
+	"description": "Create a clone of yourself at your current location and dash backwards. The clone lightly attracts projectiles and if a projectile hits it, it refreshes the cooldown of Blink (for the first projectile only). While Substitute is active, you take 20% increased damage.",
+	"action": "projectile",
+	"color": "#F85888",
+	"icon": "dna1",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 720,
+	"buffs": [
+		{
+			"type": "armor",
+			"proportion": 0.2,
+			"maxTicks": 180,
+			"render": {
+				"color": "#f8588877",
+				"alpha": 1,
+				"ticks": 1,
+				"emissionRadiusFactor": 0,
+				"particleRadius": 0,
+				"shine": 0.2,
+				"glow": 0.4,
+				"bloom": 0.02,
+				"bloomLow": 0.02,
+				"light": null
+			}
+		}
+	],
+	"recoil": 0.6,
+	"throttle": true,
+	"projectile": {
+		"density": 9999,
+		"radius": 0.016,
+		"speed": 0,
+		"maxTicks": 180,
+		"damage": 0,
+		"categories": 2,
+		"collideLike": 1,
+		"collideWith": 2,
+		"expireOn": 0,
+		"selfPassthrough": true,
+		"sound": "fireball",
+		"soundHit": "standard",
+		"color": "#f8588888",
+		"behaviours": [
+			{
+				"type": "attract",
+				"collideLike": 1,
+				"categories": 2,
+				"against": 12,
+				"radius": 0.06,
+				"accelerationPerTick": 0.05,
+				"clampSpeed": 0.6
+			},
+			{
+				"type": "spawn",
+				"trigger": {
+					"collideWith": 2
+				},
+				"projectile": {
+					"density": 1,
+					"speed": 0,
+					"damage": 0,
+					"collideWith": 1,
+					"maxTicks": 1,
+					"sensor": true,
+					"radius": 1,
+					"color": "#11111100",
+					"expireOn": 1,
+					"buffs": [
+						{
+							"type": "cooldown",
+							"owner": true,
+							"maxTicks": 1,
+							"against": 4,
+							"spellId": "m2blink",
+							"maxCooldown": 0,
+							"color": "#f85888"
+						}
+					],
+					"renderers": [
+						{
+							"type": "projectile",
+							"ticks": 1
+						}
+					]
+				}
+			}
+		],
+		"renderers": [
+			{
+				"type": "bloom",
+				"radius": 0.045
+			},
+			{
+				"type": "projectile",
+				"ticks": 30,
+				"smoke": 0.05
+			},
+			{
+				"type": "ray",
+				"ticks": 30
+			},
+			{
+				"type": "reticule",
+				"color": "#f8588888",
+				"minRadius": 0.059,
+				"radius": 0.06
+			},
+			{
+				"type": "strike",
+				"ticks": 30,
+				"flash": true,
+				"numParticles": 5
+			}
+		]
+	}
+}
