@@ -36,27 +36,27 @@
   "Options": {
     "a": [
       ["fish-1", "jtrnb-1", "mesoa"],
-      ["cookies-1", "txt-1"]
+      ["cookies-1", "txt-1", "zangoose-m2blink"]
     ],
     "q": [
       ["fish-2", "jtrnb-2", "mesoq"],
-      ["cookies-2", "txt-2"]
+      ["cookies-2", "txt-2", "zangoose-m2shadowball"]
     ],
     "w": [
       ["fish-3", "jtrnb-3", "mesow"],
-      ["cookies-3", "txt-4"]
+      ["cookies-3", "txt-4", "zangoose-m2psywave"]
     ],
     "e": [
       ["fish-4", "jtrnb-4", "mesoe"],
-      ["cookies-4", "txt-3"]
+      ["cookies-4", "txt-3", "zangoose-m2substitute"]
     ],
     "r": [
       ["fish-5", "jtrnb-5", "mesor"],
-      ["cookies-5", "txt-5"]
+      ["cookies-5", "txt-5", "zangoose-m2psystrike"]
     ],
     "f": [
       ["fishHatter", "jtrnb", "meso"],
-      ["cookies", "txt"]
+      ["cookies", "txt", "zangoose-m2"]
     ]
   },
   "Special": {
