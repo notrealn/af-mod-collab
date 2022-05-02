@@ -1,0 +1,73 @@
+{
+	"id": "zangoose-m2shadowball",
+	"name": "Shadow Ball",
+	"description": "Send an eerie ball of shadows towards your opponent, rooting them for 1 second on hit.",
+	"action": "projectile",
+	"color": "#F85888",
+	"icon": "dna1",
+	"maxAngleDiffInRevs": 0.01,
+	"cooldown": 120,
+	"throttle": true,
+	"projectile": {
+		"density": 1,
+		"radius": 0.004,
+		"speed": 0.6,
+		"maxTicks": 35,
+		"damage": 10,
+		"categories": 2,
+		"sound": "fireball",
+		"soundHit": "standard",
+		"color": "#f85888aa",
+		"buffs": [
+			{
+				"type": "movement",
+				"stack": "shadowball",
+				"maxStacks": 1,
+				"movementProportion": 0.02,
+				"maxTicks": 60,
+				"against": 12,
+				"render": {
+					"color": "#f8588888",
+					"alpha": 0.3,
+					"ticks": 15,
+					"emissionRadiusFactor": 1,
+					"particleRadius": 0.01,
+					"shine": 0.2,
+					"glow": 0.7,
+					"bloom": 0,
+					"vanish": 1
+				}
+			}
+		],
+		"renderers": [
+			{
+				"type": "bloom",
+				"radius": 0.045
+			},
+			{
+				"type": "swirl",
+				"color": "#f8588888",
+				"radius": 0.004,
+				"ticks": 20,
+				"loopTicks": 13,
+				"numParticles": 2,
+				"particleRadius": 0.003
+			},
+			{
+				"type": "projectile",
+				"ticks": 30,
+				"smoke": 0.05
+			},
+			{
+				"type": "ray",
+				"ticks": 30
+			},
+			{
+				"type": "strike",
+				"ticks": 30,
+				"flash": true,
+				"numParticles": 5
+			}
+		]
+	}
+}
