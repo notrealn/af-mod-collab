@@ -1,6 +1,6 @@
 {
   "id": "mesor",
-  "description": "For five seconds, cause Injection's reload time to dramatically drop and cause a slow. During the duration, deal 50% less damage.",
+  "description": "For five seconds, cause Injection's reload time to dramatically drop and cause a slow. During the duration, deal 50% less damage and gain 200% lifesteal.",
   "action": "projectile",
   "color": "#800",
   "name": "Modified Triage",
@@ -49,6 +49,7 @@
           {
             "type": "lifeSteal",
             "cleansable": false,
+            "lifeSteal": 2,
             "damageMultiplier": 0.5,
             "maxTicks": 1,
             "render": {
