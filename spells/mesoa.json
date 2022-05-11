@@ -1,7 +1,7 @@
 {
   "id": "mesoa",
   "name": "Blood Pressure",
-  "description": "Teleport and slash through opponents.",
+  "description": "Teleport and slash through opponents. Hitting the slash will reset cooldown.",
   "range": 0.1,
   "maxAngleDiffInRevs": 1,
   "cooldown": 600,
@@ -25,20 +25,30 @@
       "appendCollideWith": 0
     }
   ],
-  "projectileInterval": 10,
+  "projectileInterval": 120,
   "projectile": {
     "density": 0.01,
     "radius": 0.014,
     "speed": 2,
     "sound": "sun3",
     "maxTicks": 180,
-    "damage": 18,
+    "damage": 5,
     "collideWith": 3,
     "lifeSteal": 0.3,
     "sensor": true,
     "categories": 2,
     "expireAgainstHeroes": 1,
     "expireOn": 1,
+    "buffs": [
+      {
+        "type": "cooldown",
+        "collideWith": 1,
+        "owner": true,
+        "maxTicks": 1,
+        "maxCooldown": 1,
+        "spellId": "mesoa"
+      }
+    ],
     "color": "#800",
     "renderers": [
       {
@@ -56,7 +66,6 @@
         "maxTurnProportion": 1,
         "targetType": "self"
       }
-    ],
-    "buffs": []
+    ]
   }
 }
