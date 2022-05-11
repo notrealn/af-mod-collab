@@ -9,10 +9,10 @@
   "maxAngleDiffInRevs": 0.01,
   "cooldown": 600,
   "chargeTicks": 20,
-  "movementProportionWhileChannelling": 1,
+  "movementProportionWhileChannelling": 2,
   "numProjectilesPerTick": 1,
-  "intervalTicks": 6,
-  "lengthTicks": 60,
+  "intervalTicks": 1,
+  "lengthTicks": 10,
   "jitterRatio": 0,
   "projectile": {
     "density": 0.001,
@@ -23,7 +23,7 @@
     "minTicks": 3,
     "speed": 1,
     "maxTicks": 10,
-    "damage": 2,
+    "damage": 3.5,
     "lifeSteal": 0.3,
     "behaviours": [],
     "buffs": [
