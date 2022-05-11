@@ -23,7 +23,7 @@
     "minTicks": 3,
     "speed": 1,
     "maxTicks": 10,
-    "damage": 3.5,
+    "damage": 2,
     "lifeSteal": 0.3,
     "behaviours": [],
     "buffs": [
