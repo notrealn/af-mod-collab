@@ -1,0 +1,66 @@
+{
+	"id": "betapi4",
+	"name": "F=π^2EI/L^2",
+	"description": "π charges for 1 second before drawing π's blade, dealing major damage and lifesteal until the blade is sheathed.'",
+	"effects": [
+		{
+			"icon": "fas fa-hand-paper",
+			"title": "Locked",
+			"text": "This spell is locked until \"π\" is unlocked. (Credit to AceMenace for help)"
+		}
+	],
+	"action": "spray",
+	"sound": "kamehameha",
+	"color": "#290152",
+	"icon": "betapi",
+	"maxAngleDiffInRevs": 1,
+	"chargeTicks": 60,
+	"cooldown": 300,
+	"throttle": false,
+	"revsPerTickWhileCharging": 0.8,
+	"revsPerTickWhileChannelling": 1,
+	"movementCancel": false,
+	"interruptibleAfterTicks": 0,
+	"movementProportionWhileChannelling": 1,
+	"movementProportionWhileCharging": 1,
+	"interruptCancel": {
+		"cooldownTicks": 300,
+		"maxChannelingTicks": 0
+	},
+	"jitterRatio": 0,
+	"intervalTicks": 1,
+	"lengthTicks": 1000000000000000000,
+	"projectile": {
+		"density": 0.0001,
+		"attractable": false,
+		"radius": 0.002,
+		"speed": 3,
+		"maxTicks": 1,
+		"damage": 0.75,
+		"lifeSteal": 1,
+		"categories": 6,
+		"collideWith": 65535,
+		"expireOn": 65519,
+		"swappable": false,
+		"destroying": true,
+		"sound": "kamehameha",
+		"color": "#270d42",
+		"renderers": [
+			{
+				"type": "ray",
+				"intermediatePoints": true,
+				"ticks": 30,
+				"ownerColor": false,
+				"shine": 0.5,
+				"glow": 0.5,
+				"bloom": 0.003,
+				"vanish": 0.01,
+				"light": 0.6
+			}
+		],
+		"damageTemplate": {
+			"damage": 10,
+			"lifeSteal": 1
+		}
+	}
+}
