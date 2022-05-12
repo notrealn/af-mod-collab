@@ -17,7 +17,7 @@
       "cooldownRateModifier": 1
     }
   ],
-  "SecondsToShrink": 90,
+  "SecondsToShrink": 60,
   "ShrinkPowerMinPlayers": 1.5,
   "ShrinkPowerMaxPlayers": 0.25,
   "ShrinkCatchupProportionPerTick": 0.003,

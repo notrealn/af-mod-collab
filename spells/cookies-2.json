@@ -1,90 +1,20 @@
 {
 	"id": "cookies-2",
 	"name": "Dire Magic",
-	"description": "Phases out momentarily, dashing forwards and dealing damage to enemies in a line. Hitting an enemy with the end of Dire Magic resets Invocation.",
+	"description": "Does damage to enemies in a line, with additional damage at the end. Hitting an enemy with the end of Dire Magic resets Invocation.",
 	"action": "focus",
 	"color": "#670067",
 	"icon": "cookies",
 	"maxAngleDiffInRevs": 0.01,
 	"cooldown": 180,
 	"throttle": false,
-	"movementProportionWhileChannelling": 1,
-	"buffs": [
-		{
-			"type": "movement",
-			"stack": "cookies-2dash",
-			"maxTicks": 5,
-			"owner": true,
-			"movementProportion": 6,
-			"cleansable": false,
-			"render": {
-				"color": "rgba(255, 255, 255, 1)",
-				"alpha": 0.2,
-				"heroColor": true,
-				"decay": true,
-				"ticks": 72,
-				"shine": 0.5,
-				"glow": 1,
-				"bloom": 0.03,
-				"vanish": 1,
-				"emissionRadiusFactor": 0,
-				"particleRadius": 0.0125
-			}
-		},
-		{
-			"type": "mass",
-			"cleansable": false,
-			"maxTicks": 20,
-			"radius": 0.013,
-			"restrictCollideWith": 16,
-			"appendCollideWith": 16,
-			"sense": 3
-		},
-		{
-			"type": "vanish",
-			"noBuffs": true,
-			"cleansable": false,
-			"maxTicks": 20,
-			"renderStart": {
-				"numParticles": 10,
-				"color": "#670067",
-				"colorize": 1,
-				"ticks": 30,
-				"particleRadius": 0.012,
-				"glow": 0.3,
-				"shine": 1,
-				"bloom": 0,
-				"vanish": 1,
-				"light": 1
-			},
-			"renderFinish": {
-				"numParticles": 10,
-				"color": "#670067",
-				"colorize": 1,
-				"ticks": 30,
-				"particleRadius": 0.012,
-				"glow": 0.3,
-				"shine": 1,
-				"bloom": 0,
-				"vanish": 1,
-				"light": 1
-			}
-		},
-		{
-			"type": "armor",
-			"maxTicks": 10,
-			"proportion": -1,
-			"cleansable": false,
-			"minHealth": 1
-		}
-	],
 	"projectile": {
 		"density": 0.01,
 		"radius": 0.01,
 		"speed": 1.2,
 		"selfPassthrough": true,
 		"maxTicks": 8,
-		"damage": 10,
+		"damage": 8,
 		"lifeSteal": 0,
 		"categories": 2,
 		"collideWith": 8,
@@ -94,6 +24,17 @@
 		"sound": "fireball",
 		"soundHit": "standard",
 		"color": "#670067",
+		"buffs": [
+			{
+				"type": "lifeSteal",
+				"damageMultiplier": 1.75,
+				"maxTicks": 300,
+				"owner": true,
+				"stack": "cookies-4",
+				"maxStacks": 3,
+				"source": "cookies-45"
+			}
+		],
 		"behaviours": [
 			{
 				"type": "homing",
@@ -103,16 +44,18 @@
 			},
 			{
 				"type": "spawn",
+				"spread": 0.4,
+				"numProjectiles": 3,
 				"trigger": {
 					"expire": true
 				},
 				"projectile": {
 					"density": 0.01,
 					"radius": 0.008,
-					"speed": -0.4,
+					"speed": -1.7,
 					"selfPassthrough": true,
-					"maxTicks": 10,
-					"damage": 8,
+					"maxTicks": 2,
+					"damage": 0,
 					"lifeSteal": 0,
 					"categories": 2,
 					"collideWith": 8,
@@ -122,33 +65,75 @@
 					"sound": "fireball",
 					"soundHit": "standard",
 					"color": "#8800ff",
-					"buffs": [
+					"behaviours": [
 						{
-							"type": "cooldown",
-							"maxCooldown": 0,
-							"spellId": "cookies-3",
-							"owner": true,
-							"against": 12
+							"type": "spawn",
+							"trigger": {
+								"expire": true
+							},
+							"projectile": {
+								"density": 0.01,
+								"radius": 0.008,
+								"speed": -0.4,
+								"selfPassthrough": true,
+								"maxTicks": 10,
+								"damage": 6,
+								"lifeSteal": 0,
+								"categories": 2,
+								"collideWith": 8,
+								"expireOn": 8,
+								"sense": 3,
+								"hitInterval": 10,
+								"sound": "fireball",
+								"soundHit": "standard",
+								"color": "#8800ff",
+								"buffs": [
+									{
+										"type": "cooldown",
+										"maxCooldown": 0,
+										"spellId": "cookies-3",
+										"owner": true,
+										"against": 12
+									},
+									{
+										"type": "lifeSteal",
+										"damageMultiplier": 1.75,
+										"maxTicks": 300,
+										"owner": true,
+										"stack": "cookies-4",
+										"maxStacks": 3,
+										"source": "cookies-45"
+									},
+									{
+										"type": "lifeSteal",
+										"damageMultiplier": 1.75,
+										"maxTicks": 300,
+										"owner": true,
+										"source": "cookies-45"
+									}
+								],
+								"renderers": [
+									{
+										"type": "projectile",
+										"ticks": 60,
+										"light": null,
+										"smoke": 0.05
+									},
+									{
+										"type": "ray",
+										"light": null,
+										"ticks": 60
+									},
+									{
+										"type": "strike",
+										"ticks": 10,
+										"numParticles": 5
+									}
+								]
+							}
 						}
 					],
-					"renderers": [
-						{
-							"type": "projectile",
-							"ticks": 60,
-							"light": null,
-							"smoke": 0.05
-						},
-						{
-							"type": "ray",
-							"light": null,
-							"ticks": 60
-						},
-						{
-							"type": "strike",
-							"ticks": 10,
-							"numParticles": 5
-						}
-					]
+					"renderers": []
 				}
 			}
 		],

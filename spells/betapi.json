@@ -1,0 +1,35 @@
+{
+	"id": "betapi",
+	"name": "βπ",
+	"description": "An apostle of the deity Pi. Prefers far range fights and dedicates most of their kit to escaping and sniping",
+	"effects": [
+		{
+			"icon": "fas fa-shield'",
+			"title": "Protection of Pi",
+			"text": "As an apostle of Pi, BetaPi takes 3.14% less damage, moves 31.4% more quickly, and deals 3.14% more damage."
+		}
+	],
+	"passive": true,
+	"untargeted": true,
+	"cooldown": 0,
+	"buffs": [
+		{
+			"type": "armor",
+			"passive": true,
+			"proportion": -0.0314
+		},
+		{
+			"type": "movement",
+			"passive": true,
+			"proportion": 1.314
+		},
+		{
+			"type": "lifesteal",
+			"passive": true,
+			"proportion": 1.0314
+		}
+	],
+	"icon": "betapi",
+	"color": "#290152",
+	"action": "buff"
+}

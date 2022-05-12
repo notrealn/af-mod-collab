@@ -1,0 +1,43 @@
+{
+	"id": "betapi3",
+	"name": "πr^2",
+	"description": "Create a circular shield that temporarily relfects most attacks. It only lasts a very short while, so time it wisely. While your shield is active, you take 31% reduced damage.",
+	"maxTicks": 15,
+	"cooldown": 90,
+	"categories": 24,
+	"throttle": false,
+	"minRadius": 0.015,
+	"strokeRadius": 0.024,
+	"radius": 0.025,
+	"growthTicks": 1,
+	"angularWidthInRevs": 1,
+	"maxTurnRatePerTickInRevs": 1,
+	"takesOwnership": true,
+	"blocksTeleporters": false,
+	"damageMultiplier": 1,
+	"ropeLength": 0.006,
+	"angularDamping": 3,
+	"density": 1,
+	"buffs": [
+		{
+			"type": "armor",
+			"maxTicks": 15,
+			"movementProportion": -0.31
+		}
+	],
+	"icon": "betapi",
+	"color": "#290152",
+	"colorize": 0,
+	"light": 0,
+	"glow": 0.3,
+	"bloom": 0.03,
+	"shine": 0.1,
+	"strike": {
+		"ticks": 10,
+		"flash": true,
+		"growth": 0.3,
+		"bloom": 0.03
+	},
+	"action": "shield",
+	"sound": "shield"
+}

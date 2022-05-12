@@ -10,12 +10,12 @@
 		{
 			"icon": "fas fa-street-view",
 			"title": "At End",
-			"text": "You take less damage from the void."
+			"text": "You take 30% less damage from the void."
 		},
 		{
 			"icon": "fas fa-burn",
-			"title": "Energy Sources",
-			"text": "Each hit of Desecrate increases the healing from Selfish Gains by 50% for 5 seconds."
+			"title": "Energy Source",
+			"text": "Each hit of Dire Magic increases the healing from Selfish Gains by 75% for 5 seconds."
 		}
 	],
 	"passive": true,
@@ -47,7 +47,7 @@
 		},
 		{
 			"type": "armor",
-			"proportion": -0.2,
+			"proportion": -0.15,
 			"source": "lava",
 			"passive": true
 		}
