@@ -1,12 +1,12 @@
 {
 	"id": "cookies-4",
 	"name": "Desecrate",
-	"description": "Unleash a powerful blast. Enemies nearby can feel its power and take damage, increasing Desecrate's damage per enemy hit. Anguished enemies takes 120% bonus damage.",
+	"description": "Unleash a powerful blast. Enemies near are Anguished.",
 	"action": "projectile",
 	"color": "#670067",
 	"icon": "cookies",
 	"maxAngleDiffInRevs": 0.01,
-	"cooldown": 300,
+	"cooldown": 480,
 	"throttle": false,
 	"chargeTicks": 5,
 	"projectile": {
@@ -14,7 +14,7 @@
 		"radius": 0.006,
 		"linkable": false,
 		"speed": 2,
-		"maxTicks": 120,
+		"maxTicks": 60,
 		"collideWith": 1,
 		"expireOn": 0,
 		"sensor": true,
@@ -22,12 +22,11 @@
 		"damage": 0,
 		"color": "#670067",
 		"expireAfterCursorTicks": 5,
-		"source": "cookies-4",
 		"behaviours": [
 			{
 				"type": "homing",
 				"targetType": "self",
-				"revolutionsPerSecond": 2
+				"revolutionsPerSecond": 3
 			},
 			{
 				"type": "homing",
@@ -41,45 +40,53 @@
 			},
 			{
 				"type": "aura",
-				"radius": 0.01,
+				"radius": 0.02,
 				"tickInterval": 2,
-				"maxHits": 3,
+				"maxHits": 1,
 				"packet": {
-					"damage": 4,
+					"damage": 10,
 					"lifeSteal": 0,
 					"noHit": true,
-					"noKnockback": true,
-					"source": "cookiesANGUISH"
+					"noKnockback": true
 				},
 				"buffs": [
 					{
-						"type": "movement",
-						"stack": "horcrux",
-						"maxTicks": 10,
-						"movementProportion": 1,
+						"type": "vanish",
+						"maxTicks": 15,
 						"render": {
 							"color": "#670067",
-							"alpha": 0.3,
-							"glow": 0.7,
-							"ticks": 15,
-							"emissionRadiusFactor": 0.1,
-							"particleRadius": 0.013,
-							"light": 1
+							"invisible": true
 						}
 					},
 					{
-						"type": "lifeSteal",
-						"damageMultiplier": 1.5,
-						"maxTicks": 90,
-						"owner": true,
-						"source": "cookies-4"
+						"type": "cooldown",
+						"cooldownRateModifier": -0.3,
+						"maxStacks": 5,
+						"maxTicks": 120,
+						"stack": "cookies-3",
+						"against": 12
 					},
 					{
-						"type": "lifeSteal",
-						"damageMultiplier": 1.5,
-						"maxTicks": 300,
+						"type": "armor",
+						"maxTicks": 999999,
+						"proportion": 0.25,
+						"against": 12,
 						"owner": true,
-						"source": "cookies-45"
+						"maxStacks": 999,
+						"stack": "cookies-1",
+						"source": "cookies-1",
+						"render": {
+							"color": "#670067",
+							"alpha": 0.05,
+							"ticks": 1,
+							"emissionRadiusFactor": 0,
+							"particleRadius": 0.017,
+							"shine": 0.2,
+							"glow": 0.5,
+							"bloom": 0.01,
+							"bloomLow": 0.01,
+							"light": null
+						}
 					}
 				]
 			}
