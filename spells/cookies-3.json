@@ -18,8 +18,8 @@
 	"throttle": true,
 	"movementProportionWhileChannelling": 0,
 	"numProjectilesPerTick": 1,
-	"intervalTicks": 5,
-	"lengthTicks": 30,
+	"intervalTicks": 7,
+	"lengthTicks": 21,
 	"jitterRatio": 0,
 	"buffs": [
 		{
