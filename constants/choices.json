@@ -1,67 +1,121 @@
 {
-  "Keys": [
-    {
-      "btn": "a",
-      "barSize": 0.75,
-      "wheelSize": 0.5
-    },
-    null,
-    {
-      "btn": "q",
-      "barSize": 1,
-      "wheelSize": 1
-    },
-    {
-      "btn": "w",
-      "barSize": 1,
-      "wheelSize": 0.75
-    },
-    {
-      "btn": "e",
-      "barSize": 1,
-      "wheelSize": 0.75
-    },
-    {
-      "btn": "r",
-      "barSize": 1,
-      "wheelSize": 0.75
-    },
-    null,
-    {
-      "btn": "f",
-      "barSize": 0.75,
-      "wheelSize": 0.5
-    }
-  ],
-  "Options": {
-    "a": [
-      ["fish-1", "jtrnb-1", "mesoa"],
-      ["cookies-1", "txt-1", "zangoose-m2blink"]
-    ],
-    "q": [
-      ["fish-2", "jtrnb-2", "mesoq"],
-      ["cookies-2", "txt-2", "zangoose-m2shadowball"]
-    ],
-    "w": [
-      ["fish-3", "jtrnb-3", "mesow"],
-      ["cookies-3", "txt-4", "zangoose-m2psywave"]
-    ],
-    "e": [
-      ["fish-4", "jtrnb-4", "mesoe"],
-      ["cookies-4", "txt-3", "zangoose-m2substitute"]
-    ],
-    "r": [
-      ["fish-5", "jtrnb-5", "mesor"],
-      ["cookies-5", "txt-5", "zangoose-m2psystrike"]
-    ],
-    "f": [
-      ["fishHatter", "jtrnb", "meso"],
-      ["cookies", "txt", "zangoose-m2"]
-    ]
-  },
-  "Special": {
-    "move": "move",
-    "retarget": "retarget",
-    "s": "stop"
-  }
+	"Keys": [
+		{
+			"btn": "a",
+			"barSize": 0.75,
+			"wheelSize": 0.5
+		},
+		null,
+		{
+			"btn": "q",
+			"barSize": 1,
+			"wheelSize": 1
+		},
+		{
+			"btn": "w",
+			"barSize": 1,
+			"wheelSize": 0.75
+		},
+		{
+			"btn": "e",
+			"barSize": 1,
+			"wheelSize": 0.75
+		},
+		{
+			"btn": "r",
+			"barSize": 1,
+			"wheelSize": 0.75
+		},
+		null,
+		{
+			"btn": "f",
+			"barSize": 0.75,
+			"wheelSize": 0.5
+		}
+	],
+	"Options": {
+		"a": [
+			[
+				"fish-1",
+				"jtrnb-1",
+				"mesoa",
+				"betapi1"
+			],
+			[
+				"cookies-1",
+				"txt-1",
+				"zangoose-m2blink"
+			]
+		],
+		"q": [
+			[
+				"fish-2",
+				"jtrnb-2",
+				"betapi2",
+				"mesoq"
+			],
+			[
+				"cookies-2",
+				"txt-2",
+				"zangoose-m2shadowball"
+			]
+		],
+		"w": [
+			[
+				"fish-3",
+				"betapi3",
+				"jtrnb-3",
+				"mesow"
+			],
+			[
+				"cookies-3",
+				"txt-4",
+				"zangoose-m2psywave"
+			]
+		],
+		"e": [
+			[
+				"fish-4",
+				"jtrnb-4",
+				"mesoe",
+				"betapi4"
+			],
+			[
+				"cookies-4",
+				"txt-3",
+				"zangoose-m2substitute"
+			]
+		],
+		"r": [
+			[
+				"fish-5",
+				"jtrnb-5",
+				"mesor",
+				"betapi5"
+			],
+			[
+				"cookies-5",
+				"txt-5",
+				"zangoose-m2psystrike"
+			]
+		],
+		"f": [
+			[
+				"fishHatter",
+				"jtrnb",
+				"meso",
+				"betapi"
+			],
+			[
+				"cookies",
+				"txt",
+				"zangoose-m2"
+			]
+		]
+	},
+	"Special": {
+		"move": "move",
+		"retarget": "retarget",
+		"s": "stop"
+	}
 }
