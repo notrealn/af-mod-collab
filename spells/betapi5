@@ -1,0 +1,87 @@
+{
+	"id": "betapi5",
+	"name": "π",
+	"description": "Channels for 2 seconds as π takes over and uses your body as his vessel. When finished channeling, π will gain a boost in all stats and a reduction of all spell cooldowns.'",
+	"effects": [
+		{
+			"icon": "fas fa-hand-paper",
+			"title": "Locked",
+			"text": "\"π\" will slowly unlock itself as it gains energy from attacks that hit enemies. (Credit to AceMenace for code)"
+		}
+	],
+	"untargeted": true,
+	"maxAngleDiffInRevs": 1,
+	"cooldown": 31415926535897932,
+	"chargeTicks": 120,
+	"movementProportionWhileCharging": 0.5,
+	"throttle": false,
+	"debuff": true,
+	"buffs": [
+		{
+			"type": "movement",
+			"movementProportion": 1.25,
+			"maxTicks": 31415926535,
+			"sound": "",
+			"render": {
+				"color": "#5c0659",
+				"alpha": 0.2,
+				"heroColor": false,
+				"ticks": 30,
+				"emissionRadiusFactor": 0,
+				"particleRadius": 0.014,
+				"shine": 0.5,
+				"glow": 1,
+				"vanish": 1,
+				"decay": true
+			}
+		},
+		{
+			"type": "cooldown",
+			"owner": true,
+			"maxTicks": 1,
+			"spellId": "betapi4",
+			"maxCooldown": 0,
+			"sound": "",
+			"color": "#5c060f"
+		},
+		{
+			"type": "armor",
+			"proportion": -0.25,
+			"maxTicks": 31415926535,
+			"sound": "",
+			"render": {
+				"color": "#5c0659",
+				"alpha": 0.5,
+				"heroColor": false,
+				"ticks": 30,
+				"emissionRadiusFactor": 0,
+				"particleRadius": 0.014,
+				"shine": 0.5,
+				"glow": 1,
+				"vanish": 1,
+				"decay": true
+			}
+		},
+		{
+			"type": "lifesteal",
+			"damageMultiplier": 1.25,
+			"maxTicks": 31415926535,
+			"sound": "",
+			"render": {
+				"color": "#5c060f",
+				"alpha": 0.5,
+				"heroColor": false,
+				"ticks": 30,
+				"emissionRadiusFactor": 0,
+				"particleRadius": 0.014,
+				"shine": 0.5,
+				"glow": 1,
+				"vanish": 1,
+				"decay": true
+			}
+		}
+	],
+	"icon": "betapi",
+	"color": "#290152",
+	"action": "buff"
+}
