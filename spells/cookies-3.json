@@ -1,41 +1,73 @@
 {
 	"id": "cookies-3",
 	"name": "Invocation",
-	"description": "Invokes the Voidscape, inflicting Anguish.",
+	"description": "Unleashes magic tendrils, striking enemies, inflicting Anguish.",
 	"effects": [
 		{
 			"icon": "fas fa-heart-broken",
 			"title": "Anguish",
-			"text": "Spells cools down 20% slower for 2 seconds. Can stack up to 5 times."
+			"text": "Spells cools down 30% slower for 2 seconds. Can stack up to 3 times. After 3 stacks, Anguished enemies have their cooldowns raised by 30%, up to 2 additional stacks."
 		}
 	],
-	"action": "projectile",
+	"action": "spray",
 	"color": "#670067",
 	"icon": "cookies",
 	"sound": "triplet",
 	"maxAngleDiffInRevs": 0.01,
 	"cooldown": 480,
 	"throttle": true,
-	"maxChannellingTicks": 150,
+	"movementProportionWhileChannelling": 0,
+	"numProjectilesPerTick": 1,
+	"intervalTicks": 5,
+	"lengthTicks": 30,
+	"jitterRatio": 0,
+	"buffs": [
+		{
+			"type": "mass",
+			"maxTicks": 30,
+			"radius": 0.014,
+			"density": 10
+		}
+	],
 	"projectile": {
-		"density": 0.1,
-		"radius": 0.085,
-		"speed": 0,
-		"maxTicks": 120,
-		"damage": 4,
+		"density": 1,
+		"radius": 0.005,
+		"speed": 1.6,
+		"maxTicks": 35,
 		"selfPassthrough": true,
-		"lifeSteal": 0,
+		"damage": 6,
 		"categories": 2,
-		"color": "#670067",
-		"sensor": true,
-		"collideWith": 1,
+		"expireAgainstObjects": 65534,
 		"expireOn": 0,
-		"hitInterval": 30,
+		"sound": "triplet",
+		"collideWith": 1,
+		"sensor": true,
+		"hitInterval": 15,
+		"soundHit": "standared",
+		"color": "#670067",
+		"behaviours": [
+			{
+				"type": "homing",
+				"targetType": "follow",
+				"maxTicks": 3,
+				"revolutionsPerSecond": 1,
+				"maxTurnProportion": 0.5
+			},
+			{
+				"trigger": {
+					"afterTicks": 10
+				},
+				"type": "homing",
+				"revolutionsPerSecond": 1,
+				"targetType": "self",
+				"newSpeed": 0.66,
+				"speedDecayPerTick": 0.05
+			}
+		],
 		"buffs": [
 			{
 				"type": "cooldown",
-				"cooldownRateModifier": -0.8,
-				"spellId": "cookies-3",
+				"cooldownRateModifier": -0.3,
 				"maxStacks": 5,
 				"maxTicks": 120,
 				"stack": "cookies-3",
@@ -43,40 +75,16 @@
 			},
 			{
 				"type": "armor",
-				"maxTicks": 120,
-				"proportion": 1.2,
-				"source": "cookiesANGUISH",
-				"against": 12,
-				"maxStacks": 1,
-				"stack": "cookies-3",
-				"render": {
-					"color": "#670067",
-					"alpha": 0.2,
-					"ticks": 10,
-					"emissionRadiusFactor": 0,
-					"particleRadius": 0.012,
-					"shine": 0.2,
-					"glow": 0.5,
-					"bloom": 0.01,
-					"bloomLow": 0.01,
-					"light": 1,
-					"smoke": {
-						"axisMultiplier": 1,
-						"isotropicSpeed": 0.25
-					}
-				}
-			},
-			{
-				"type": "armor",
 				"maxTicks": 999999,
-				"proportion": 0.5,
+				"proportion": 0.25,
 				"against": 12,
 				"owner": true,
+				"maxStacks": 999,
 				"stack": "cookies-1",
 				"source": "cookies-1",
 				"render": {
 					"color": "#670067",
-					"alpha": 0.1,
+					"alpha": 0.05,
 					"ticks": 1,
 					"emissionRadiusFactor": 0,
 					"particleRadius": 0.017,
@@ -90,22 +98,15 @@
 		],
 		"renderers": [
 			{
-				"type": "reticule",
-				"color": "#800080",
-				"radius": 0.09,
-				"minRadius": 0.0825,
-				"shrinkTicks": 13,
-				"grow": true,
-				"fade": true,
-				"repeat": true
+				"type": "projectile",
+				"ticks": 60,
+				"light": null,
+				"smoke": 0.05
 			},
 			{
-				"type": "reticule",
-				"color": "#800080",
-				"radius": 0.09,
-				"minRadius": 0.0825,
-				"shrinkTicks": 10,
-				"startingTicks": 10
+				"type": "ray",
+				"light": null,
+				"ticks": 60
 			}
 		]
 	}
