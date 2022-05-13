@@ -1,10 +1,10 @@
 {
 	"id": "cookies-1",
 	"name": "No Hope",
-	"description": "Every inflicted stack of Anguish increases this spell's power by 25%. Casting this spell resets them. This spell heals 4 damage over 4 seconds, cleansing you afterwards. You move 50% slower while healing.",
+	"description": "Every inflicted stack of Anguish increases this spell's power by 25%. Casting this spell resets them. This spell heals 8 damage over 4 seconds, cleansing you afterwards. You move 50% slower while healing.",
 	"effects": [],
 	"untargeted": true,
-	"cooldown": 1200,
+	"cooldown": 900,
 	"icon": "cookies",
 	"color": "#670067",
 	"action": "projectile",
@@ -21,7 +21,7 @@
 			"hitInterval": 3,
 			"maxTicks": 240,
 			"packet": {
-				"damage": -0.05,
+				"damage": -0.1,
 				"lifeSteal": 0,
 				"noHit": true,
 				"source": "cookies-1"
