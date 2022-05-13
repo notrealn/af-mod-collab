@@ -1,0 +1,26 @@
+{
+	"id": "lockCooldowns",
+	"health": 2,
+	"collideWith": 1,
+	"sensor": true,
+	"static": true,
+	"undamageable": true,
+	"strike": {
+		"ticks": 15,
+		"flash": true
+	},
+	"hitInterval": 30,
+	"decayPerSecond": 1,
+	"buffs": [
+		{
+			"type": "cooldown",
+			"maxTicks": 1,
+			"against": 65535,
+			"spellIds": [
+				"betapi4",
+				"betapi5"
+			],
+			"minCooldown": 31415926535
+		}
+	]
+}
