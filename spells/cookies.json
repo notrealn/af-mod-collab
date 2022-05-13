@@ -5,8 +5,8 @@
 	"effects": [
 		{
 			"icon": "fas fa-box",
-			"title": "",
-			"text": ""
+			"title": "No Hope - Dire Magic - Desecrate - Invocation - Empower",
+			"text": "A self sustaining attrition class that weaves in and out of battle."
 		}
 	],
 	"passive": true,
