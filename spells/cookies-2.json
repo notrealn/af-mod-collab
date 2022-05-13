@@ -1,7 +1,7 @@
 {
 	"id": "cookies-2",
 	"name": "Dire Magic",
-	"description": "Does damage to enemies in a line, with additional damage at the end. Hitting an enemy with the end of Dire Magic resets Invocation.",
+	"description": "Does damage to enemies in a line, with additional damage at the end. Hitting an enemy with the end of Dire Magic resets Desecrate.",
 	"action": "focus",
 	"color": "#670067",
 	"icon": "cookies",
@@ -31,7 +31,7 @@
 				"maxTicks": 300,
 				"owner": true,
 				"stack": "cookies-4",
-				"maxStacks": 3,
+				"maxStacks": 2,
 				"source": "cookies-45"
 			}
 		],
@@ -87,6 +87,10 @@
 								"sound": "fireball",
 								"soundHit": "standard",
 								"color": "#8800ff",
+								"partialDamage": {
+									"initialMultiplier": 0.5,
+									"ticks": 10
+								},
 								"buffs": [
 									{
 										"type": "cooldown",
