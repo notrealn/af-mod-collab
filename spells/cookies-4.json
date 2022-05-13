@@ -1,116 +1,205 @@
 {
 	"id": "cookies-4",
-	"name": "Desecrate",
-	"description": "Unleash a powerful blast. Enemies near are Anguished.",
+	"name": "Invocation",
+	"description": "Summons a raven that flies around you. Hitting an enemy causes you to cast a Desecrate towards the nearest enemy after 1 second.",
 	"action": "projectile",
 	"color": "#670067",
 	"icon": "cookies",
 	"maxAngleDiffInRevs": 0.01,
 	"cooldown": 480,
 	"throttle": false,
-	"chargeTicks": 5,
 	"projectile": {
 		"density": 0.001,
-		"radius": 0.006,
+		"radius": 0.005,
 		"linkable": false,
-		"speed": 2,
-		"maxTicks": 60,
-		"collideWith": 1,
+		"speed": 0.8,
+		"maxTicks": 30,
 		"expireOn": 0,
+		"collideWith": 1,
 		"sensor": true,
+		"hitInterval": 30,
 		"swappable": false,
-		"damage": 0,
+		"damage": 5,
 		"color": "#670067",
-		"expireAfterCursorTicks": 5,
 		"behaviours": [
 			{
 				"type": "homing",
-				"targetType": "self",
-				"revolutionsPerSecond": 3
+				"revolutionsPerSecond": 1,
+				"maxTurnProportion": 0.2,
+				"targetType": "self"
 			},
 			{
-				"type": "homing",
-				"targetType": "release",
-				"revolutionsPerSecond": 0.3
+				"type": "strafe"
 			},
 			{
-				"type": "homing",
-				"targetType": "cursor",
-				"revolutionsPerSecond": 0.01
-			},
-			{
-				"type": "aura",
-				"radius": 0.02,
-				"tickInterval": 2,
-				"maxHits": 1,
-				"packet": {
-					"damage": 10,
-					"lifeSteal": 0,
-					"noHit": true,
-					"noKnockback": true
+				"type": "spawn",
+				"trigger": {
+					"collideWith": 1
 				},
-				"buffs": [
-					{
-						"type": "vanish",
-						"maxTicks": 15,
-						"render": {
-							"color": "#670067",
-							"invisible": true
+				"projectile": {
+					"density": 0.01,
+					"radius": 0.008,
+					"speed": 2,
+					"selfPassthrough": true,
+					"maxTicks": 60,
+					"damage": 0,
+					"lifeSteal": 0,
+					"categories": 2,
+					"collideWith": 8,
+					"expireOn": 8,
+					"sense": 3,
+					"hitInterval": 10,
+					"sound": "fireball",
+					"soundHit": "standard",
+					"color": "#8800ff",
+					"projectileBuffs": [
+						{
+							"type": "movement",
+							"movementProportion": 0.5,
+							"maxTicks": 60,
+							"render": {
+								"numParticles": 2,
+								"color": "#670067",
+								"ticks": 30,
+								"emissionRadiusFactor": 1.1,
+								"particleRadius": 0.002,
+								"glow": 0.3,
+								"bloom": 0,
+								"vanish": 1,
+								"light": null
+							}
 						}
-					},
-					{
-						"type": "cooldown",
-						"cooldownRateModifier": -0.3,
-						"maxStacks": 5,
-						"maxTicks": 120,
-						"stack": "cookies-3",
-						"against": 12
-					},
-					{
-						"type": "armor",
-						"maxTicks": 999999,
-						"proportion": 0.25,
-						"against": 12,
-						"owner": true,
-						"maxStacks": 999,
-						"stack": "cookies-1",
-						"source": "cookies-1",
-						"render": {
-							"color": "#670067",
-							"alpha": 0.05,
-							"ticks": 1,
-							"emissionRadiusFactor": 0,
-							"particleRadius": 0.017,
-							"shine": 0.2,
-							"glow": 0.5,
-							"bloom": 0.01,
-							"bloomLow": 0.01,
-							"light": null
+					],
+					"behaviours": [
+						{
+							"type": "homing",
+							"targetType": "self"
+						},
+						{
+							"type": "spawn",
+							"trigger": {
+								"expire": true
+							},
+							"projectile": {
+								"density": 1,
+								"radius": 0.003,
+								"speed": 0.9,
+								"maxTicks": 15,
+								"selfPassthrough": true,
+								"damage": 5,
+								"categories": 2,
+								"expireAgainstObjects": 65534,
+								"expireOn": 0,
+								"sound": "triplet",
+								"collideWith": 1,
+								"sensor": true,
+								"hitInterval": 15,
+								"soundHit": "standared",
+								"color": "#670067",
+								"partialDamage": {
+									"initialMultiplier": 5,
+									"ticks": 15
+								},
+								"behaviours": [
+									{
+										"type": "homing",
+										"targetType": "enemy",
+										"redirect": true
+									}
+								],
+								"buffs": [
+									{
+										"type": "movement",
+										"maxTicks": 6,
+										"movementProportion": 2,
+										"against": 12,
+										"owner": true,
+										"render": {
+											"numParticles": 2,
+											"color": "#670067",
+											"ticks": 30,
+											"emissionRadiusFactor": 0.8,
+											"particleRadius": 0.003,
+											"glow": 0.3,
+											"bloom": 0,
+											"vanish": 1,
+											"light": null
+										}
+									},
+									{
+										"type": "cooldown",
+										"cooldownRateModifier": -0.5,
+										"maxStacks": 4,
+										"maxTicks": 120,
+										"stack": "cookies-3",
+										"against": 12,
+										"render": {
+											"color": "#670067",
+											"alpha": 0.1,
+											"ticks": 1,
+											"emissionRadiusFactor": 0.8,
+											"particleRadius": 0.002,
+											"shine": 0.2,
+											"glow": 0.5,
+											"bloom": 0.01,
+											"bloomLow": 0.01,
+											"light": null
+										}
+									},
+									{
+										"type": "armor",
+										"maxTicks": 999999,
+										"proportion": 0.25,
+										"against": 12,
+										"owner": true,
+										"maxStacks": 999,
+										"stack": "cookies-1",
+										"source": "cookies-1",
+										"render": {
+											"color": "#670067",
+											"alpha": 0.05,
+											"ticks": 1,
+											"emissionRadiusFactor": 0,
+											"particleRadius": 0.017,
+											"shine": 0.2,
+											"glow": 0.5,
+											"bloom": 0.01,
+											"bloomLow": 0.01,
+											"light": null
+										}
+									}
+								],
+								"renderers": [
+									{
+										"type": "projectile",
+										"ticks": 60,
+										"light": null,
+										"smoke": 0.05
+									},
+									{
+										"type": "ray",
+										"light": null,
+										"ticks": 60
+									}
+								]
+							}
 						}
-					}
-				]
+					],
+					"renderers": []
+				}
 			}
 		],
 		"renderers": [
 			{
-				"type": "bloom",
-				"radius": 0.05
-			},
-			{
 				"type": "projectile",
-				"ticks": 60,
+				"ticks": 15,
 				"light": null,
 				"smoke": 0.05
 			},
 			{
 				"type": "ray",
 				"light": null,
-				"ticks": 60
-			},
-			{
-				"type": "strike",
-				"ticks": 60,
-				"numParticles": 1
+				"ticks": 15
 			}
 		]
 	}
