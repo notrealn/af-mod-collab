@@ -9,8 +9,9 @@ It's quite simple!
 1. Make a class in this format: 
 > A spell - Q spell - W spell - E spell - R spell - Class description passive
 2. Send the file over to Fishhatter or JTRNB to get your class added in!
-4. Limit 1 class per person, so design wisely!
-5. You may make changes to your class at any time (just send the file!)
+> Send to cookies, since he has the current mod file up to date.
+3. Limit 1 class per person, so design wisely!
+4. You may make changes to your class at any time (just send the file!)
 
 ## Github Info
 Once in a while, the github will be updated with the newest classes and changes. 
